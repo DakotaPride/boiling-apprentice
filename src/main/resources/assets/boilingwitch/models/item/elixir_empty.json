@@ -1,0 +1,123 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"glass": "boilingwitch:item/potion/glass",
+		"liquid": "boilingwitch:item/potion/liquid/empty",
+		"particle": "#liquid"
+	},
+	"elements": [
+		{
+			"from": [5, 0, 7],
+			"to": [9, 4, 11],
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#glass"},
+				"east": {"uv": [0, 4, 4, 8], "texture": "#glass"},
+				"south": {"uv": [4, 0, 8, 4], "texture": "#glass"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#glass"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#glass"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#glass"}
+			}
+		},
+		{
+			"from": [6, 3, 8],
+			"to": [8, 6, 10],
+			"faces": {
+				"north": {"uv": [7, 8, 9, 11], "texture": "#glass"},
+				"east": {"uv": [9, 7, 11, 10], "texture": "#glass"},
+				"south": {"uv": [9, 10, 11, 13], "texture": "#glass"},
+				"west": {"uv": [4, 11, 6, 14], "texture": "#glass"},
+				"up": {"uv": [13, 6, 11, 4], "texture": "#glass"},
+				"down": {"uv": [8, 11, 6, 13], "texture": "#glass"}
+			}
+		},
+		{
+			"from": [5.75, 5, 7.75],
+			"to": [8.25, 5.5, 10.25],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 4, 9]},
+			"faces": {
+				"north": {"uv": [11, 6, 13.5, 6.5], "texture": "#glass"},
+				"east": {"uv": [11, 7, 13.5, 7.5], "texture": "#glass"},
+				"south": {"uv": [11, 8, 13.5, 8.5], "texture": "#glass"},
+				"west": {"uv": [11, 9, 13.5, 9.5], "texture": "#glass"},
+				"up": {"uv": [6.5, 10.5, 4, 8], "texture": "#glass"},
+				"down": {"uv": [10.5, 4, 8, 6.5], "texture": "#glass"}
+			}
+		},
+		{
+			"from": [5.25, 0.25, 7.25],
+			"to": [8.75, 3.75, 10.75],
+			"faces": {
+				"north": {"uv": [0, 0, 3.5, 3.5], "texture": "#liquid"},
+				"east": {"uv": [0, 4, 3.5, 7.5], "texture": "#liquid"},
+				"south": {"uv": [4, 0, 7.5, 3.5], "texture": "#liquid"},
+				"west": {"uv": [4, 4, 7.5, 7.5], "texture": "#liquid"},
+				"up": {"uv": [3.5, 11.5, 0, 8], "texture": "#liquid"},
+				"down": {"uv": [11.5, 0, 8, 3.5], "texture": "#liquid"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [6.21, -15.57, 11.2],
+			"translation": [-1, 6.5, 0]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [6.21, -15.57, 11.2],
+			"translation": [-3.25, 6.5, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [3.54, 12.95, -5.64],
+			"translation": [0, 8.75, 0.75],
+			"scale": [1.15625, 1.15625, 1.15625]
+		},
+		"firstperson_lefthand": {
+			"rotation": [3.54, 12.95, -5.64],
+			"translation": [0, 8.75, 0.75],
+			"scale": [1.15625, 1.15625, 1.15625]
+		},
+		"ground": {
+			"rotation": [-7.33, 24.57, -9.98],
+			"translation": [0, 5.25, -2.25]
+		},
+		"gui": {
+			"rotation": [0, -18.75, -25],
+			"translation": [6.25, 8.5, 0],
+			"scale": [1.93555, 1.93555, 1.93555]
+		},
+		"head": {
+			"translation": [4, 22, -3.5],
+			"scale": [3.73633, 3.73633, 3.73633]
+		},
+		"fixed": {
+			"translation": [2, 11.25, 0],
+			"scale": [2.23828, 2.23828, 2.23828]
+		}
+	},
+	"groups": [
+		{
+			"name": "potion",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [
+				{
+					"name": "body",
+					"origin": [0, 0, 0],
+					"color": 0,
+					"children": [0]
+				},
+				{
+					"name": "top",
+					"origin": [0, 0, 0],
+					"color": 0,
+					"children": [1, 2]
+				},
+				{
+					"name": "liquid",
+					"origin": [0, 0, 0],
+					"color": 0,
+					"children": [3]
+				}
+			]
+		}
+	]
+}

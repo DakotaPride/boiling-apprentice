@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "boilingwitch:block/wrinkling_oak_slab"
+    },
+    "type=double": {
+      "model": "boilingwitch:block/wrinkling_oak_planks"
+    },
+    "type=top": {
+      "model": "boilingwitch:block/wrinkling_oak_slab_top"
+    }
+  }
+}

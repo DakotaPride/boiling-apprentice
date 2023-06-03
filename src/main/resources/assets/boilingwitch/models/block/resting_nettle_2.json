@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "boilingwitch:block/resting_nettle_2"
+  }
+}

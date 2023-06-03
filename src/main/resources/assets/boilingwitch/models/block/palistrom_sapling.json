@@ -1,0 +1,56 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"sapling": "boilingwitch:block/palistrom_sapling",
+		"particle": "boilingwitch:block/palistrom_sapling"
+	},
+	"elements": [
+		{
+			"from": [5.5, 0, 5.5],
+			"to": [10.5, 2, 10.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 1, 8]},
+			"faces": {
+				"north": {"uv": [5, 0, 10, 2], "texture": "#sapling"},
+				"east": {"uv": [5, 0, 10, 2], "texture": "#sapling"},
+				"south": {"uv": [5, 0, 10, 2], "texture": "#sapling"},
+				"west": {"uv": [5, 0, 10, 2], "texture": "#sapling"},
+				"up": {"uv": [5, 5, 0, 0], "texture": "#sapling"},
+				"down": {"uv": [5, 0, 0, 5], "texture": "#sapling"}
+			}
+		},
+		{
+			"from": [5.5, 2, 8],
+			"to": [10.5, 5, 8],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 3, 8]},
+			"faces": {
+				"north": {"uv": [10, 0, 15, 3], "texture": "#sapling"},
+				"east": {"uv": [0, 0, 0, 2], "texture": "#sapling"},
+				"south": {"uv": [10, 0, 15, 3], "texture": "#sapling"},
+				"west": {"uv": [0, 0, 0, 2], "texture": "#sapling"},
+				"up": {"uv": [0, 5, 0, 0], "rotation": 90, "texture": "#sapling"},
+				"down": {"uv": [0, 0, 0, 5], "rotation": 270, "texture": "#sapling"}
+			}
+		},
+		{
+			"from": [8, 2, 5.5],
+			"to": [8, 5, 10.5],
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 3, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 2], "texture": "#sapling"},
+				"east": {"uv": [10, 0, 15, 3], "texture": "#sapling"},
+				"south": {"uv": [0, 0, 0, 2], "texture": "#sapling"},
+				"west": {"uv": [10, 0, 15, 3], "texture": "#sapling"},
+				"up": {"uv": [0, 5, 0, 0], "texture": "#sapling"},
+				"down": {"uv": [0, 0, 0, 5], "texture": "#sapling"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "seed",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

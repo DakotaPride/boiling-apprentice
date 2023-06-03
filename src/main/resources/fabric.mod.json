@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "boilingwitch",
+	"version": "${version}",
+	"name": "Boiling Witch",
+	"description": "Wanna be a witch? You've come to just the right place!",
+	"authors": [
+		"DakotaPride",
+		"HoloScopeStudios"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/boilingwitch/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.dakotapride.boilingwitch.common.BoilingWitchMod"
+		],
+		"client": [
+			"net.dakotapride.boilingwitch.client.BoilingWitchClient"
+		],
+		"fabric-datagen": [
+			"net.dakotapride.boilingwitch.common.datagen.BoilingWitchDatagen"
+		],
+		"rei_client": [
+			"net.dakotapride.boilingwitch.common.integration.rei.BoilingWitchPlugin"
+		]
+	},
+	"mixins": [
+		"boilingwitch.mixins.json"
+	],
+
+	"accessWidener": "boilingwitch.accesswidener",
+
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": "~1.19",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"hibernalherbs": "*",
+		"lambdynlights": "*"
+	}
+}

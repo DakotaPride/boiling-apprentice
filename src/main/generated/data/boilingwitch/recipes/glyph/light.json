@@ -1,0 +1,23 @@
+{
+  "type": "boilingwitch:enhancement",
+  "ingredients": [
+    {
+      "item": "boilingwitch:mystic_essence"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "boilingwitch:chalk_light"
+    },
+    {
+      "item": "boilingwitch:glyph"
+    }
+  ],
+  "output": {
+    "item": "boilingwitch:glyph_light"
+  }
+}

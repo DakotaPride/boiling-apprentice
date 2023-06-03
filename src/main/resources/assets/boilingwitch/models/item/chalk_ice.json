@@ -1,0 +1,6 @@
+{
+  "parent": "boilingwitch:item/chalk",
+  "textures": {
+    "chalk": "boilingwitch:item/chalk/ice"
+  }
+}

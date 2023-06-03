@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "boilingwitch:block/wrinkling_oak_planks",
+    "side": "boilingwitch:block/wrinkling_oak_planks",
+    "top": "boilingwitch:block/wrinkling_oak_planks"
+  }
+}

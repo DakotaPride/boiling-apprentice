@@ -1,0 +1,23 @@
+{
+  "type": "boilingwitch:enhancement",
+  "ingredients": [
+    {
+      "item": "boilingwitch:mystic_essence"
+    },
+    {
+      "item": "minecraft:packed_ice"
+    },
+    {
+      "item": "minecraft:packed_ice"
+    },
+    {
+      "item": "boilingwitch:chalk_ice"
+    },
+    {
+      "item": "boilingwitch:glyph"
+    }
+  ],
+  "output": {
+    "item": "boilingwitch:glyph_ice"
+  }
+}

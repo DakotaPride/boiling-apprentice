@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:gold_nugget"
+    },
+    "A": {
+      "item": "minecraft:black_wool"
+    },
+    "X": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " # ",
+    "AXA"
+  ],
+  "result": {
+    "item": "boilingwitch:visor_brewing"
+  }
+}

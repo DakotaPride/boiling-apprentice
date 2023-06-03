@@ -1,0 +1,23 @@
+{
+  "type": "boilingwitch:enhancement",
+  "ingredients": [
+    {
+      "item": "boilingwitch:mystic_essence"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "boilingwitch:chalk_fire"
+    },
+    {
+      "item": "boilingwitch:glyph"
+    }
+  ],
+  "output": {
+    "item": "boilingwitch:glyph_fire"
+  }
+}

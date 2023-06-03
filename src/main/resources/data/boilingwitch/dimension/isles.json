@@ -1,0 +1,48 @@
+{
+  "type": "boilingwitch:isles",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "boilingwitch:isles",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "boilingwitch:wrinkling_oak_plains",
+          "parameters": {
+            "temperature": 0.45,
+            "humidity": 0.35,
+            "continentalness": 0.55,
+            "erosion": 0.4,
+            "weirdness": 0.02,
+            "depth": 0.125,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "boilingwitch:wrinkling_oak_forest",
+          "parameters": {
+            "temperature": 0.4,
+            "humidity": 0.3,
+            "continentalness": 0.6,
+            "erosion": 0.3,
+            "weirdness": 0.03,
+            "depth": 0.15,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "boilingwitch:eclipse_plains",
+          "parameters": {
+            "temperature": 0.05,
+            "humidity": 0,
+            "continentalness": 0.2025,
+            "erosion": 0.65,
+            "weirdness": 0.3,
+            "depth": 0.3,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

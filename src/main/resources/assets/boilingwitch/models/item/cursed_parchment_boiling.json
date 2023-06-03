@@ -1,0 +1,6 @@
+{
+  "parent": "boilingwitch:item/cursed_parchment",
+  "textures": {
+    "ribbon": "boilingwitch:item/glyph/parchment/ribbon/cursed/boiling"
+  }
+}

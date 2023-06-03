@@ -1,0 +1,6 @@
+{
+  "parent": "boilingwitch:item/glyph",
+  "textures": {
+    "glyph": "boilingwitch:item/glyph/remnant"
+  }
+}

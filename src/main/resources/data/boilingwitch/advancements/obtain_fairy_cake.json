@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "boilingwitch:fairy_cake"
+    },
+    "title": {
+      "translate": "advancement.boilingwitch.obtain_fairy_cake.title"
+    },
+    "description": {
+      "translate": "advancement.boilingwitch.obtain_fairy_cake.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "fairy_cake": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "boilingwitch:fairy_cake"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "fairy_cake"
+    ]
+  ]
+}

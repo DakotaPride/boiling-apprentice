@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "boilingwitch:block/wrinkling_oak_planks"
+  }
+}

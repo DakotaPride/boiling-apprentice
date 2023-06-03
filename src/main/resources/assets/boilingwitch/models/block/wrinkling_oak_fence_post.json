@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_post",
+  "textures": {
+    "texture": "boilingwitch:block/wrinkling_oak_planks"
+  }
+}

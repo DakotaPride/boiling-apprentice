@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:red_mushroom",
+    "minecraft:brown_mushroom",
+    "minecraft:spider_eye",
+    "minecraft:fermented_spider_eye",
+    "minecraft:rotten_flesh"
+  ]
+}

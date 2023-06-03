@@ -1,0 +1,63 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"chalk": "boilingwitch:item/chalk/chalk"
+	},
+	"elements": [
+		{
+			"from": [7, 11, 8],
+			"to": [8, 15, 9],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 4], "texture": "#chalk"},
+				"east": {"uv": [1, 0, 2, 4], "texture": "#chalk"},
+				"south": {"uv": [2, 0, 3, 4], "texture": "#chalk"},
+				"west": {"uv": [3, 0, 4, 4], "texture": "#chalk"},
+				"up": {"uv": [1, 5, 0, 4], "texture": "#chalk"},
+				"down": {"uv": [5, 0, 4, 1], "texture": "#chalk"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-12.32, 6.25, 15.27],
+			"translation": [0, -3.75, 0.25],
+			"scale": [1.16992, 1.16992, 1.16992]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-12.32, 6.25, 15.27],
+			"translation": [-1, -4.5, 0.5],
+			"scale": [1.16992, 1.16992, 1.16992]
+		},
+		"firstperson_righthand": {
+			"rotation": [-8.75, 0, 14.25],
+			"translation": [0, -0.5, 4]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-8.75, 0, 14.25],
+			"translation": [0, -0.5, 4]
+		},
+		"ground": {
+			"rotation": [14.66, -0.87, -2.66],
+			"translation": [0, -6.25, 0],
+			"scale": [1.31055, 1.31055, 1.31055]
+		},
+		"gui": {
+			"rotation": [-16.78, -0.96, -42.45],
+			"translation": [-8, -11, 0],
+			"scale": [2.66211, 2.66211, 2.66211]
+		},
+		"fixed": {
+			"rotation": [0, 0, 35.25],
+			"translation": [7.5, -8, 0],
+			"scale": [2.0957, 2.0957, 2.0957]
+		}
+	},
+	"groups": [
+		{
+			"name": "chalk",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "boilingwitch:item/glyph",
+  "textures": {
+    "overlay": "boilingwitch:item/glyph/overlay/old/light",
+    "energy": "boilingwitch:item/glyph/energy/energy"
+  }
+}

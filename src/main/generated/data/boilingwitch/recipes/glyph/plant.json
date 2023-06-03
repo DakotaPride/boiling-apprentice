@@ -1,0 +1,23 @@
+{
+  "type": "boilingwitch:enhancement",
+  "ingredients": [
+    {
+      "item": "boilingwitch:mystic_essence"
+    },
+    {
+      "tag": "minecraft:small_flowers"
+    },
+    {
+      "tag": "minecraft:small_flowers"
+    },
+    {
+      "item": "boilingwitch:chalk_plant"
+    },
+    {
+      "item": "boilingwitch:glyph"
+    }
+  ],
+  "output": {
+    "item": "boilingwitch:glyph_plant"
+  }
+}

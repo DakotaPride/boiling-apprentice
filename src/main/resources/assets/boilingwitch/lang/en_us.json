@@ -1,0 +1,11 @@
+{
+  "item.boilingwitch.elixir_empty": "Empty Elixir Bottle",
+  "item.boilingwitch.elixir_avian": "Elixir",
+
+  "item.boilingwitch.fairy_cake": "Fairy Cake",
+
+  "advancement.boilingwitch.obtain_fairy_cake.title": "No Cake Pants?",
+  "advancement.boilingwitch.obtain_fairy_cake.description": "Obtain Fairy Cake",
+
+  "death.attack.boilingwitch.boiledWaters": "%1$s thought that the water was fine"
+}

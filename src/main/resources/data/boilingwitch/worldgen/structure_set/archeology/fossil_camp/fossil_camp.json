@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "boilingwitch:archeology/fossil_camp/fossil_camp",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 287540457,
+    "spacing": 12,
+    "separation": 5
+  }
+}

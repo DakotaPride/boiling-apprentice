@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "boilingwitch:palistrom_log",
+    "boilingwitch:stripped_palistrom_log",
+    "boilingwitch:palistrom_wood",
+    "boilingwitch:stripped_palistrom_wood"
+  ]
+}

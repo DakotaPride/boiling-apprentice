@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "boilingwitch:block/resting_nettle_0"
+      },
+      {
+        "model": "boilingwitch:block/resting_nettle_1"
+      },
+      {
+        "model": "boilingwitch:block/resting_nettle_2"
+      },
+      {
+        "model": "boilingwitch:block/resting_nettle_3"
+      },
+      {
+        "model": "boilingwitch:block/resting_nettle_4"
+      },
+      {
+        "model": "boilingwitch:block/resting_nettle_5"
+      }
+    ]
+  }
+}

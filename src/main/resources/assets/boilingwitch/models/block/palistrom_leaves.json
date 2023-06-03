@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "boilingwitch:block/palistrom_leaves"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "boilingwitch:archeology/fossil_camp/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "boilingwitch:archeology/fossil_camp/fossil_camp_1",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

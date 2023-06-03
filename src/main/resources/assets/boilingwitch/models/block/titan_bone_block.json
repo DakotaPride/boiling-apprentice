@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "boilingwitch:block/titan_bone_block_top",
+    "side": "boilingwitch:block/titan_bone_block_side"
+  }
+}

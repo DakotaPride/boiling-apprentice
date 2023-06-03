@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "boilingwitch:glyph_fire",
+    "boilingwitch:glyph_ice",
+    "boilingwitch:glyph_plant",
+    "boilingwitch:glyph_light"
+  ]
+}

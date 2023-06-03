@@ -1,0 +1,6 @@
+{
+  "parent": "boilingwitch:item/parchment",
+  "textures": {
+    "ribbon": "boilingwitch:item/glyph/parchment/ribbon/safe_hover"
+  }
+}

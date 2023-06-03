@@ -1,0 +1,82 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [8, 8],
+	"textures": {
+		"seed": "boilingwitch:item/palistrom_seed"
+	},
+	"elements": [
+		{
+			"from": [7, 12, 7],
+			"to": [9, 14, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 4], "texture": "#seed"},
+				"east": {"uv": [0, 4, 4, 8], "texture": "#seed"},
+				"south": {"uv": [4, 0, 8, 4], "texture": "#seed"},
+				"west": {"uv": [4, 4, 8, 8], "texture": "#seed"},
+				"up": {"uv": [4, 12, 0, 8], "texture": "#seed"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#seed"}
+			}
+		},
+		{
+			"from": [7.25, 13.75, 8],
+			"to": [9.25, 15.75, 8],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [8, 14.75, 8]},
+			"faces": {
+				"north": {"uv": [4, 8, 8, 12], "texture": "#seed"},
+				"east": {"uv": [0, 0, 0, 4], "texture": "#seed"},
+				"south": {"uv": [8, 4, 12, 8], "texture": "#seed"},
+				"west": {"uv": [0, 0, 0, 4], "texture": "#seed"},
+				"up": {"uv": [4, 0, 0, 0], "texture": "#seed"},
+				"down": {"uv": [4, 0, 0, 0], "texture": "#seed"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0.8, -14.72, 6.25],
+			"translation": [-1.25, -4.25, 0]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0.8, -14.72, 6.25],
+			"translation": [-1.25, -4.25, 0]
+		},
+		"firstperson_righthand": {
+			"rotation": [-3.49, 0.63, -10.25],
+			"translation": [0.5, -6.5, 0.5],
+			"scale": [1.75977, 1.75977, 1.75977]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-3.49, 0.63, -10.25],
+			"translation": [0.5, -6.5, 0.5],
+			"scale": [1.75977, 1.75977, 1.75977]
+		},
+		"ground": {
+			"rotation": [-110.17, -80.05, -129.59],
+			"translation": [0, -7.75, 0],
+			"scale": [1.34375, 1.34375, 1.34375]
+		},
+		"gui": {
+			"rotation": [0, -24, -32],
+			"translation": [-8, -14.5, 0],
+			"scale": [3.125, 3.125, 3.125]
+		},
+		"head": {
+			"rotation": [7.5, 0, 0],
+			"translation": [0, -18.5, -0.75],
+			"scale": [4, 4, 4]
+		},
+		"fixed": {
+			"translation": [0, -14, 0],
+			"scale": [2.74023, 2.74023, 2.74023]
+		}
+	},
+	"groups": [
+		{
+			"name": "seed",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

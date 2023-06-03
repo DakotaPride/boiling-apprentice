@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "boilingwitch:chalk"
+    },
+    {
+      "item": "minecraft:candle"
+    }
+  ],
+  "result": {
+    "item": "boilingwitch:chalk_light"
+  }
+}

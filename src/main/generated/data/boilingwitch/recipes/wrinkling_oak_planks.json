@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "boilingwitch:wrinkling_oak_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "boilingwitch:wrinkling_oak_planks"
+  }
+}
