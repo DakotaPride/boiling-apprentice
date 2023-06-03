@@ -47,6 +47,22 @@ repositories {
     }
 
     maven { url "https://maven.jamieswhiteshirt.com/libs-release" } //reach-entity-attributes
+
+
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+
+
+    maven {
+        name 'Gegy'
+        url 'https://maven.gegy.dev'
+    }
 }
 
 dependencies {
@@ -68,6 +84,13 @@ dependencies {
 
     // Reach Attributes
     include modImplementation("com.jamieswhiteshirt:reach-entity-attributes:2.3.0")
+
+    // Geckolib
+    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19:3.1.18'
+
+    // LambDynamicLights
+    modImplementation "curse.maven:lambdynamiclights-393442:4257321"
+    modImplementation include("dev.lambdaurora:spruceui:${project.spruceui_version}")
 
 }
 
