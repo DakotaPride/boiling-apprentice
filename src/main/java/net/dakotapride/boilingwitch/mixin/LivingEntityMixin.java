@@ -4,13 +4,14 @@ import net.dakotapride.boilingwitch.common.BoilingWitchMod;
 import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
 import net.dakotapride.boilingwitch.common.register.content.DamageSourceRegister;
 import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
+import net.dakotapride.boilingwitch.common.register.content.EnchantmentRegister;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -21,7 +22,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity implements ISpellStoring {
     private static final Identifier BOILING_ISLES_KEY = new Identifier(BoilingWitchMod.MOD_ID, "isles");
-    float randomValue = Random.create().nextFloat();
 
     LivingEntity livingEntity = (LivingEntity) (Object) this;
     public LivingEntityMixin(EntityType<?> type, World world) {
@@ -46,21 +46,27 @@ public abstract class LivingEntityMixin extends Entity implements ISpellStoring 
         }
     }
 
-    @Inject(method = "tick", at = @At("HEAD"))
-    private void canSeeCursedIndividual(CallbackInfo ci) {
-        if (hasAvianCurse(livingEntity)) {
-            if (!(livingEntity.hasStatusEffect(StatusEffects.INVISIBILITY))) {
-                if (randomValue  * 20 <= 2) {
-                    livingEntity.setInvisible(true);
-                } else if (randomValue * 20 > 2) {
-                    livingEntity.setInvisible(false);
-                }
+    @Inject(method = "onAttacking", at = @At("HEAD"))
+    private void applyInsanityOnAttack(Entity target, CallbackInfo ci) {
+        if (target instanceof LivingEntity livingTarget) {
+            if (EnchantmentHelper.getLevel(EnchantmentRegister.DEMENTED, livingEntity.getOffHandStack()) > 0) {
+                livingTarget.addStatusEffect(new StatusEffectInstance(EffectRegister.INSANITY, 100, 0));
+            } else if (EnchantmentHelper.getLevel(EnchantmentRegister.INVERSE, livingEntity.getOffHandStack()) > 0) {
+                livingTarget.heal(8.0F);
             }
         }
     }
 
     @Inject(method = "travel", at = @At("HEAD"))
-    private void getHoiseConfigurator(Vec3d movementInput, CallbackInfo ci) {
+    private void applyUpholdingModifiers(Vec3d movementInput, CallbackInfo ci) {
+        if (livingEntity.hasStatusEffect(EffectRegister.INSANITY)) {
+            livingEntity.setYaw(1.0F);
+            livingEntity.onLanding();
+        }
+    }
+
+    @Inject(method = "travel", at = @At("HEAD"))
+    private void getHoistConfiguration(Vec3d movementInput, CallbackInfo ci) {
         if (livingEntity.canMoveVoluntarily() || livingEntity.isLogicalSideForUpdatingMovement()) {
             boolean bl = livingEntity.getVelocity().y <= 0.0;
             if (bl && livingEntity.hasStatusEffect(EffectRegister.HOISTING)) {

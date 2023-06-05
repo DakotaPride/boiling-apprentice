@@ -1,6 +1,7 @@
 package net.dakotapride.boilingwitch.common.register.content;
 
 import net.dakotapride.boilingwitch.common.effect.HoistingEffect;
+import net.dakotapride.boilingwitch.common.effect.InsanityEffect;
 import net.dakotapride.boilingwitch.common.effect.curse.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -34,6 +35,7 @@ public class EffectRegister {
 
     // Non-curses
     public static StatusEffect HOISTING = registerEffect("hoisting", new HoistingEffect());
+    public static StatusEffect INSANITY = registerEffect("uphold", new InsanityEffect());
 
     public static void register() {}
 

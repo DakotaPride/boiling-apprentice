@@ -80,6 +80,9 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item HOIST_CONFIGURATOR = registerItem("hoist_configurator",
             new HoistConfiguratorItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
+    public static Item DESTABILIZER = registerItem("destabilizer",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     // Brewing Advancing Items
     public static Item BREWING_VISOR = registerItem("visor_brewing",
             new VisorItem(ArmourMaterialsRegister.MYSTIC, new FabricItemSettings().group(BOILING_WITCH_GROUP)));
