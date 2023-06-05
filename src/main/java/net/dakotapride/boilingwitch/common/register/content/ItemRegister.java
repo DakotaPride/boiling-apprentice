@@ -85,7 +85,7 @@ public class ItemRegister implements IBoilingWitchItemGroup {
 
     // Brewing Advancing Items
     public static Item BREWING_VISOR = registerItem("visor_brewing",
-            new VisorItem(ArmourMaterialsRegister.MYSTIC, new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+            new VisorItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     public static Item FAIRY_CAKE = registerItem("fairy_cake",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxCount(1).food(FoodComponentRegister.FAIRY_CAKE)));
