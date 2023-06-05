@@ -41,6 +41,8 @@ repositories {
 
     maven { url = 'https://maven.minecraftforge.net/' }
 
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+
     maven {
         name = "REI"
         url = "https://maven.shedaniel.me"
@@ -85,6 +87,8 @@ dependencies {
     // LambDynamicLights
     modImplementation "curse.maven:lambdynamiclights-393442:4257321"
     modImplementation include("dev.lambdaurora:spruceui:${project.spruceui_version}")
+
+    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.19:3.1.18'
 
 }
 

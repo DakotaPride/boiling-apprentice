@@ -1,5 +1,6 @@
 package net.dakotapride.boilingwitch.common.register.content;
 
+import net.dakotapride.boilingwitch.common.BoilingWitchMod;
 import net.dakotapride.boilingwitch.common.datagen.tag.ItemTagData;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
@@ -11,7 +12,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum ArmourMaterialsRegister implements ArmorMaterial {
-    MYSTIC("mystic", 6, new int[]{1, 2, 3, 1}, 14,
+    MYSTIC(BoilingWitchMod.MOD_ID + ":mystic", 6, new int[]{1, 2, 3, 1}, 14,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, 0.0F,
             () -> Ingredient.fromTag(ItemTagData.CAN_REPAIR_MYSTIC_EQUIPMENT));
 

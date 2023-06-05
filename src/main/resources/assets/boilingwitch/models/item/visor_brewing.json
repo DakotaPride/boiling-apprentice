@@ -1,26 +1,80 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "boilingwitch:models/armour/visor",
-		"particle": "boilingwitch:models/armour/visor"
+		"0": "boilingwitch:models/armor/visor",
+		"particle": "boilingwitch:models/armor/visor"
 	},
 	"elements": [
 		{
-			"from": [0, 4, 8],
-			"to": [8, 12, 8],
+			"from": [4, 7, 7],
+			"to": [12, 12, 7],
 			"faces": {
-				"north": {"uv": [0, 0, 8, 8], "texture": "#0"},
-				"east": {"uv": [0, 0, 0, 8], "texture": "#0"},
-				"south": {"uv": [8, 0, 16, 8], "texture": "#0"},
-				"west": {"uv": [0, 0, 0, 8], "texture": "#0"},
+				"north": {"uv": [0, 0, 8, 5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 5], "texture": "#0"},
+				"south": {"uv": [0, 5, 8, 10], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 5], "texture": "#0"},
 				"up": {"uv": [8, 0, 0, 0], "texture": "#0"},
 				"down": {"uv": [8, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"from": [4, 7, 7],
+			"to": [4, 12, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 1, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 5], "texture": "#0"},
+				"east": {"uv": [8, 0, 10, 5], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 5], "texture": "#0"},
+				"west": {"uv": [8, 5, 10, 10], "texture": "#0"},
+				"up": {"uv": [0, 2, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [12, 7, 7],
+			"to": [12, 12, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 1, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 5], "texture": "#0"},
+				"east": {"uv": [8, 0, 10, 5], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 5], "texture": "#0"},
+				"west": {"uv": [8, 5, 10, 10], "texture": "#0"},
+				"up": {"uv": [0, 2, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 2], "texture": "#0"}
 			}
 		}
 	],
 	"display": {
+		"thirdperson_righthand": {
+			"rotation": [1.24, 18.18, -7.81],
+			"translation": [-0.5, 0, 1.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [1.24, 18.18, -7.81],
+			"translation": [-0.5, 0, 1.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [151.22, 32.07, -154.12],
+			"translation": [0.5, 2.25, 1.25],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"firstperson_lefthand": {
+			"rotation": [151.22, 32.07, -154.12],
+			"translation": [0.5, 2.25, 1.25],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"gui": {
+			"rotation": [15, 135, 0],
+			"translation": [0, -2.75, 0],
+			"scale": [1.65, 1.65, 1.65]
+		},
 		"head": {
-			"translation": [-1, 0.25, -6.5]
+			"translation": [0, -1.75, -5.5],
+			"scale": [1.75, 1.75, 1.75]
+		},
+		"fixed": {
+			"translation": [0, -2.25, 0],
+			"scale": [1.45, 1.45, 1.45]
 		}
 	},
 	"groups": [
@@ -28,7 +82,7 @@
 			"name": "visor",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"children": [0]
+			"children": [0, 1, 2]
 		}
 	]
 }

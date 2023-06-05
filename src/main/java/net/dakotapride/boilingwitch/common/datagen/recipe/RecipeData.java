@@ -99,7 +99,7 @@ public class RecipeData extends FabricRecipeProvider {
                 .criterion("has_resting_nettle_stew", RecipeProvider.conditionsFromItem(ItemRegister.RESTING_NETTLE_STEW))
                 .offerTo(exporter, new Identifier(potions + "helpful/owl_curse"));
 
-        ShapedRecipeJsonBuilder.create(ItemRegister.BREWING_VISOR)
+        ShapedRecipeJsonBuilder.create(ItemRegister.MASK_OF_PURITY)
                 .pattern(" # ")
                 .pattern("AXA")
                 .input('#', Items.GOLD_NUGGET)
@@ -108,7 +108,7 @@ public class RecipeData extends FabricRecipeProvider {
                 .criterion("has_wool", RecipeProvider.conditionsFromItem(Items.BLACK_WOOL))
                 .input('X', Items.STRING)
                 .criterion("has_string", RecipeProvider.conditionsFromItem(Items.STRING))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.BREWING_VISOR)));
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.MASK_OF_PURITY)));
 
         // Wood Types
         // Planks

@@ -6,6 +6,7 @@ import net.dakotapride.boilingwitch.common.register.content.feature.PlacedFeatur
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
 
 public class BoilingWitchMod implements ModInitializer {
 	public static final String MOD_ID = "boilingwitch";
@@ -25,6 +26,8 @@ public class BoilingWitchMod implements ModInitializer {
 		PlacedFeatureRegister.init();
 
 		BoilingWitchBiomes.register();
+
+		GeckoLib.initialize();
 	}
 
 }
