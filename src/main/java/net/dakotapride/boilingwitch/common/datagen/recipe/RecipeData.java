@@ -23,6 +23,13 @@ public class RecipeData extends FabricRecipeProvider {
     @Override
     protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
 
+        ShapelessRecipeJsonBuilder.create(ItemRegister.RUINED_LETTER)
+                .input(Items.PAPER)
+                .criterion("has_paper", RecipeProvider.conditionsFromItem(Items.PAPER))
+                .input(BlockRegister.ABERRANT_STONE.asItem())
+                .criterion("has_stone", RecipeProvider.conditionsFromItem(BlockRegister.ABERRANT_STONE.asItem()))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.RUINED_LETTER)));
+
         ShapelessRecipeJsonBuilder.create(ItemRegister.RESTING_NETTLE_STEW)
                 .input(Items.BOWL)
                 .criterion("has_bowl", RecipeProvider.conditionsFromItem(Items.BOWL))

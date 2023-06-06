@@ -94,6 +94,10 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item CLEANSED_FAIRY_CAKE = registerItem("cleansed_fairy_cake",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxCount(1).food(FoodComponentRegister.CLEANSED_FAIRY_CAKE)));
 
+    // Ruined Letters
+    public static Item RUINED_LETTER = registerItem("ruined_letter",
+            new RuinedLetterItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     public static void register() {}
 
 }
