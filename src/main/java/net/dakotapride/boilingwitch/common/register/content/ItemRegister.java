@@ -79,6 +79,12 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item MYSTIC_ESSENCE = registerItem("mystic_essence",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
+    public static Item RUINED_LETTER = registerItem("ruined_letter",
+            new RuinedLetterItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
+    public static Item TINTED_ECHO_SHARD = registerItem("tinted_echo_shard",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     public static Item HOIST_CONFIGURATOR = registerItem("hoist_configurator",
             new HoistConfiguratorItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
@@ -93,10 +99,6 @@ public class ItemRegister implements IBoilingWitchItemGroup {
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxCount(1).food(FoodComponentRegister.FAIRY_CAKE)));
     public static Item CLEANSED_FAIRY_CAKE = registerItem("cleansed_fairy_cake",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxCount(1).food(FoodComponentRegister.CLEANSED_FAIRY_CAKE)));
-
-    // Ruined Letters
-    public static Item RUINED_LETTER = registerItem("ruined_letter",
-            new RuinedLetterItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     public static void register() {}
 

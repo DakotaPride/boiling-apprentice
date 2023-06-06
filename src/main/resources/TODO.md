@@ -3,7 +3,7 @@
 ### Implementing Systems
 #### Natural Progression System
 
-Refer to ![The Base Progression Guide](https://github.com/DakotaPride/boiling-apprentice/blob/master/src/main/java/net/dakotapride/boilingwitch/projectProgression/PROGRESSION.md) provided, though some information is changed, which will be covered here in this file.
+Refer to ![The Base Progression Guide](https://github.com/DakotaPride/boiling-apprentice/blob/master/src/main/java/net/dakotapride/boilingwitch/progressionDraft/PROGRESSION.md) provided, though some information is changed, which will be covered here in this file.
 
 Even though most of the 'early-game' is already planned out, there are some things that have changed in development.
 
