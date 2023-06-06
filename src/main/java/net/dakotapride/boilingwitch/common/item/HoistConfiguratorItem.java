@@ -7,8 +7,8 @@ public class HoistConfiguratorItem extends MysticItem {
         super(settings);
     }
 
-    @Override
-    public int ME(int energy) {
-        return 32;
-    }
+    //  @Override
+    //  public int ME(int energy) {
+    //      return 32;
+    //  }
 }

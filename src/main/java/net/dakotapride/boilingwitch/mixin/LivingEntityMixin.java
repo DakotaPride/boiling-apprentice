@@ -2,19 +2,14 @@ package net.dakotapride.boilingwitch.mixin;
 
 import net.dakotapride.boilingwitch.common.BoilingWitchMod;
 import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
-import net.dakotapride.boilingwitch.common.item.magic.MysticItem;
 import net.dakotapride.boilingwitch.common.register.content.DamageSourceRegister;
 import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
 import net.dakotapride.boilingwitch.common.register.content.EnchantmentRegister;
-import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
@@ -51,13 +46,13 @@ public abstract class LivingEntityMixin extends Entity implements ISpellStoring 
         }
     }
 
-    @Inject(method = "baseTick", at = @At("HEAD"))
-    private void getME(CallbackInfo ci) {
-        if (livingEntity instanceof PlayerEntity player && player.getMainHandStack().getItem() instanceof MysticItem mysticItem
-                && player.getEquippedStack(EquipmentSlot.HEAD).isOf(ItemRegister.MASK_OF_PURITY)) {
-            player.sendMessage(Text.literal("ME: " + mysticItem.getMysticEnergy()), true);
-        }
-    }
+    // @Inject(method = "baseTick", at = @At("HEAD"))
+    //    private void getME(CallbackInfo ci) {
+    //        if (livingEntity instanceof PlayerEntity player && player.getMainHandStack().getItem() instanceof MysticItem mysticItem
+    //                && player.getEquippedStack(EquipmentSlot.HEAD).isOf(ItemRegister.MASK_OF_PURITY)) {
+    //            player.sendMessage(Text.literal("ME: " + mysticItem.getMysticEnergy()), true);
+    //        }
+    //    }
 
     @Inject(method = "onAttacking", at = @At("HEAD"))
     private void applyInsanityOnAttack(Entity target, CallbackInfo ci) {

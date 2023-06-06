@@ -55,8 +55,8 @@ public class GlyphParchmentItem extends ParchmentItem implements ISpellStoring {
         return super.use(world, user, hand);
     }
 
-    @Override
-    public int ME(int energy) {
-        return 24;
-    }
+    //  @Override
+    //  public int ME(int energy) {
+    //      return 24;
+    //  }
 }

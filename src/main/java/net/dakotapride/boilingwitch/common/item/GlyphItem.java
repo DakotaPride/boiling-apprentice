@@ -1,9 +1,9 @@
 package net.dakotapride.boilingwitch.common.item;
 
 import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
-import net.dakotapride.boilingwitch.common.item.magic.MysticItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.Text;
@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class GlyphItem extends MysticItem implements ISpellStoring {
+public class GlyphItem extends Item implements ISpellStoring {
     public GlyphItem(Settings settings) {
         super(settings);
     }
@@ -60,8 +60,8 @@ public class GlyphItem extends MysticItem implements ISpellStoring {
         return super.useOnBlock(context);
     }
 
-    @Override
-    public int ME(int energy) {
-        return 16;
-    }
+    //  @Override
+    //  public int ME(int energy) {
+    //      return 16;
+    //  }
 }

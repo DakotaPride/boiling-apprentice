@@ -79,8 +79,8 @@ public class ParchmentItem extends MysticItem implements ISpellStoring {
         return super.use(world, user, hand);
     }
 
-    @Override
-    public int ME(int energy) {
-        return mysticEnergy;
-    }
+    //  @Override
+    //  public int ME(int energy) {
+    //      return mysticEnergy;
+    //  }
 }
