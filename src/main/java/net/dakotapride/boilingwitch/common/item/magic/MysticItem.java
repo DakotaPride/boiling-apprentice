@@ -3,8 +3,8 @@ package net.dakotapride.boilingwitch.common.item.magic;
 import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -22,7 +22,7 @@ public class MysticItem extends Item {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        PlayerEntity player = MinecraftClient.getInstance().player;
+        ClientPlayerEntity player = MinecraftClient.getInstance().player;
 
         if (player.getEquippedStack(EquipmentSlot.HEAD).isOf(ItemRegister.MASK_OF_PURITY)) {
             tooltip.add(Text.literal("Hello! My ME is currently hidden :)"));
