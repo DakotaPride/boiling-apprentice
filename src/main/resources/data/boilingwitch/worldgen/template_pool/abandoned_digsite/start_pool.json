@@ -1,5 +1,5 @@
 {
-  "name": "boilingwitch:archeology/fossil_camp/start_pool",
+  "name": "boilingwitch:abandoned_digsite/start_pool",
   "fallback": "minecraft:empty",
   "elements": [
     {
@@ -7,7 +7,7 @@
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
-        "location": "boilingwitch:archeology/fossil_camp/fossil_camp_1",
+        "location": "boilingwitch:abandoned_digsite/abandoned_digsite_main",
         "processors": "minecraft:empty"
       }
     }

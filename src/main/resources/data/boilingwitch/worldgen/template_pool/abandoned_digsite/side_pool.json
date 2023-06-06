@@ -1,0 +1,33 @@
+{
+  "name": "boilingwitch:abandoned_digsite/side_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "boilingwitch:abandoned_digsite/aberrant_stone_pocket",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "boilingwitch:abandoned_digsite/palistrom_wood_deposit",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "boilingwitch:abandoned_digsite/wrinkling_oak_wood_deposit",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}
