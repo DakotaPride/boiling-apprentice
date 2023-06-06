@@ -4,6 +4,10 @@ import net.dakotapride.boilingwitch.common.register.content.*;
 import net.dakotapride.boilingwitch.common.register.content.biome.BoilingWitchBiomes;
 import net.dakotapride.boilingwitch.common.register.content.feature.PlacedFeatureRegister;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib3.GeckoLib;
@@ -28,6 +32,10 @@ public class BoilingWitchMod implements ModInitializer {
 		BoilingWitchBiomes.register();
 
 		GeckoLib.initialize();
+
+		FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(modContainer ->
+				ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(MOD_ID, "no3d"),
+						modContainer, ResourcePackActivationType.NORMAL));
 	}
 
 }
