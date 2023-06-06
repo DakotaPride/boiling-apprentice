@@ -1,11 +1,11 @@
 package net.dakotapride.boilingwitch.common.item;
 
 import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
+import net.dakotapride.boilingwitch.common.item.magic.MysticItem;
 import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
@@ -17,7 +17,15 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ParchmentItem extends Item implements ISpellStoring {
+public class ParchmentItem extends MysticItem implements ISpellStoring {
+    int mysticEnergy;
+
+    public ParchmentItem(int energy, Settings settings) {
+        super(settings);
+
+        this.mysticEnergy = energy;
+    }
+
     public ParchmentItem(Settings settings) {
         super(settings);
     }
@@ -35,6 +43,8 @@ public class ParchmentItem extends Item implements ISpellStoring {
         } else if (isBoilingParchment(stack.getItem())) {
             setSpellTooltip(tooltip, stack, parchmentMedium, ".boiling");
         }
+
+        super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override
@@ -67,5 +77,10 @@ public class ParchmentItem extends Item implements ISpellStoring {
         }
 
         return super.use(world, user, hand);
+    }
+
+    @Override
+    public int ME(int energy) {
+        return mysticEnergy;
     }
 }

@@ -1,8 +1,8 @@
 package net.dakotapride.boilingwitch.common.item;
 
 import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
+import net.dakotapride.boilingwitch.common.item.magic.MysticItem;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
@@ -10,7 +10,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ChalkItem extends Item implements ISpellStoring {
+public class ChalkItem extends MysticItem implements ISpellStoring {
     public ChalkItem(Settings settings) {
         super(settings);
     }
@@ -26,5 +26,13 @@ public class ChalkItem extends Item implements ISpellStoring {
         } else if (isLightRelatedSpell(stack.getItem())) {
             setSpellTooltip(tooltip, stack, chalkMedium, lightModifier);
         }
+
+        super.appendTooltip(stack, world, tooltip, context);
     }
+
+    @Override
+    public int ME(int energy) {
+        return 32;
+    }
+
 }

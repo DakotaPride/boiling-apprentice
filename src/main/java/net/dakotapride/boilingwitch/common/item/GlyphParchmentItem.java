@@ -27,6 +27,8 @@ public class GlyphParchmentItem extends ParchmentItem implements ISpellStoring {
         } else if (isSafeHoverScroll(stack.getItem())) {
             setSpellTooltip(tooltip, stack, parchmentMedium, "safety_hover");
         }
+
+        super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override
@@ -53,4 +55,8 @@ public class GlyphParchmentItem extends ParchmentItem implements ISpellStoring {
         return super.use(world, user, hand);
     }
 
+    @Override
+    public int ME(int energy) {
+        return 24;
+    }
 }

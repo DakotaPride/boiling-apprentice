@@ -1,6 +1,7 @@
 package net.dakotapride.boilingwitch.common.item;
 
 import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
+import net.dakotapride.boilingwitch.common.item.magic.MysticItem;
 import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
 import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.advancement.criterion.Criteria;
@@ -8,7 +9,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -19,8 +19,8 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
-public class ElixerItem extends Item implements ISpellStoring {
-    public ElixerItem(Settings settings) {
+public class ElixirItem extends MysticItem implements ISpellStoring {
+    public ElixirItem(Settings settings) {
         super(settings);
     }
 
@@ -80,5 +80,10 @@ public class ElixerItem extends Item implements ISpellStoring {
 
         user.emitGameEvent(GameEvent.DRINK);
         return stack;
+    }
+
+    @Override
+    public int ME(int energy) {
+        return 12;
     }
 }

@@ -55,19 +55,19 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item PARCHMENT_SAFE_HOVER = registerItem("parchment_safe_hover",
             new GlyphParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
     public static Item CURSED_PARCHMENT_AVIAN = registerItem("cursed_parchment_avian",
-            new ParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new ParchmentItem(20, new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
     public static Item CURSED_PARCHMENT_VULTURE = registerItem("cursed_parchment_vulture",
-            new ParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new ParchmentItem(20, new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
     public static Item CURSED_PARCHMENT_UNGUARDED = registerItem("cursed_parchment_unguarded",
-            new ParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new ParchmentItem(20, new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
     public static Item CURSED_PARCHMENT_DEVIANCY = registerItem("cursed_parchment_deviancy",
-            new ParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new ParchmentItem(20, new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
     public static Item CURSED_PARCHMENT_BOILING = registerItem("cursed_parchment_boiling",
-            new ParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new ParchmentItem(20, new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
 
     // Elixir Items
     public static Item AVIAN_CURSE_ELIXIR = registerItem("elixir_avian",
-            new ElixerItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new ElixirItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
     public static Item EMPTY_ELIXIR = registerItem("elixir_empty",
             new Item(new FabricItemSettings().maxCount(16).group(BOILING_WITCH_GROUP)));
 
