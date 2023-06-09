@@ -12,10 +12,6 @@
               "function": "minecraft:set_nbt",
               "tag": "letterValue",
               "conditions": [
-                {
-                  "condition": "minecraft:random_chance",
-                  "chance": 1
-                }
               ]
             }
           ]
