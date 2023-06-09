@@ -91,6 +91,9 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item DESTABILIZER = registerItem("destabilizer",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
+    public static Item FRACTURED_CORE = registerItem("fractured_core",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     // Brewing Advancing Items
     public static Item MASK_OF_PURITY = registerItem("mask_of_purity",
             new MaskOfPurityItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
