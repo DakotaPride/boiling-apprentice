@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "boilingwitch:galdorstone",
+      "data": {
+        "require": {
+          "riftUses": 2
+        }
+      }
+    },
+    {
+      "item": "boilingwitch:metallic_sash",
+      "remainder": {
+        "item": "boilingwitch:metallic_sash",
+        "data": {
+          "Damage": "$ i0.Damage + 1"
+        }
+      }
+    }
+  ],
+  "result": {
+    "item": "boilingwitch:galdorstone",
+    "count": 1,
+
+    "data": {
+      "riftUses": 6
+    }
+  }
+
+}

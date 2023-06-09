@@ -39,10 +39,12 @@
 		"fabricloader": "*",
 		"minecraft": "~1.19",
 		"java": ">=17",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"lambdynlights": "*",
+		"geckolib3": "*",
+		"nbtcrafting": "*"
 	},
 	"suggests": {
-		"hibernalherbs": "*",
-		"lambdynlights": "*"
+		"hibernalherbs": "*"
 	}
 }

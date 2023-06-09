@@ -100,6 +100,23 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item CLEANSED_FAIRY_CAKE = registerItem("cleansed_fairy_cake",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxCount(1).food(FoodComponentRegister.CLEANSED_FAIRY_CAKE)));
 
+    public static Item GALDORSTONE = registerItem("galdorstone",
+            new GaldorstoneItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+    public static Item GALDORSTONE_SHARD = registerItem("galdorstone_shard",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
+    public static Item METALLIC_SASH = registerItem("metallic_sash",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxDamage(24)));
+    public static Item RADIANT_SASH = registerItem("radiant_sash",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxDamage(36)));
+    public static Item EXECUTIVE_SASH = registerItem("executive_sash",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxDamage(48)));
+    public static Item ECHOED_SASH = registerItem("echoed_sash",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP).maxDamage(60)));
+
+    public static Item CREATIVE_SASH = registerItem("creative_sash",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     public static void register() {}
 
 }
