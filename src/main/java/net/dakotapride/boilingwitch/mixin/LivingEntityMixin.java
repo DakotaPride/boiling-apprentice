@@ -72,7 +72,6 @@ public abstract class LivingEntityMixin extends Entity implements ISpellStoring 
     private void getInsanityModifiers(Vec3d movementInput, CallbackInfo ci) {
         if (livingEntity.hasStatusEffect(EffectRegister.INSANITY)) {
             livingEntity.setYaw(1.0F);
-            livingEntity.onLanding();
         }
     }
 
