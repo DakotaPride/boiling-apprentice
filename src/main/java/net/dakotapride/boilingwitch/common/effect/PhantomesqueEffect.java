@@ -14,10 +14,9 @@ public class PhantomesqueEffect extends StatusEffect {
     @Override
     public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
 
-        if (entity instanceof PlayerEntity playerEntity) {
-            var abilities = playerEntity.getAbilities();
-
-            abilities.allowFlying = true;
+        if (entity instanceof PlayerEntity player) {
+            player.getAbilities().allowFlying = true;
+            player.sendAbilitiesUpdate();
         }
 
         super.onApplied(entity, attributes, amplifier);
@@ -26,10 +25,9 @@ public class PhantomesqueEffect extends StatusEffect {
     @Override
     public void onRemoved(LivingEntity entity, AttributeContainer attributes, int amplifier) {
 
-        if (entity instanceof PlayerEntity playerEntity) {
-            var abilities = playerEntity.getAbilities();
-
-            abilities.allowFlying = false;
+        if (entity instanceof PlayerEntity player) {
+            player.getAbilities().allowFlying = false;
+            player.sendAbilitiesUpdate();
         }
 
         super.onRemoved(entity, attributes, amplifier);
