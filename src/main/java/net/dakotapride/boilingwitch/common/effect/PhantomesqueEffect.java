@@ -8,7 +8,7 @@ import net.minecraft.entity.player.PlayerEntity;
 
 public class PhantomesqueEffect extends StatusEffect {
     public PhantomesqueEffect() {
-        super(StatusEffectCategory.BENEFICIAL, 0x88FF00);
+        super(StatusEffectCategory.BENEFICIAL, 0x7E627B);
     }
 
     @Override
