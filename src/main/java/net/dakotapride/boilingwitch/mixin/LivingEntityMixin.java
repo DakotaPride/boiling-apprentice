@@ -14,7 +14,6 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -22,7 +21,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin extends Entity implements ISpellStoring {
-    @Shadow protected int playerHitTimer;
     private static final Identifier BOILING_ISLES_KEY = new Identifier(BoilingWitchMod.MOD_ID, "isles");
 
     LivingEntity livingEntity = (LivingEntity) (Object) this;
@@ -91,6 +89,10 @@ public abstract class LivingEntityMixin extends Entity implements ISpellStoring 
             boolean bl = livingEntity.getVelocity().y <= 0.0;
             if (bl && hasAvianCurse(livingEntity) || bl && hasVultureCurse(livingEntity)) {
                 livingEntity.setVelocity(livingEntity.getVelocity().multiply(1,0.6,1));
+
+                livingEntity.onLanding();
+            } else if (bl && hasPhantomesqueCurse(livingEntity)) {
+                livingEntity.setVelocity(livingEntity.getVelocity().multiply(1, 0.8, 1));
 
                 livingEntity.onLanding();
             }

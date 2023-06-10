@@ -95,6 +95,10 @@ public interface ISpellStoring extends IGlyph {
         return entity.hasStatusEffect(EffectRegister.DEVIANCY_CURSE);
     }
 
+    default boolean hasPhantomesqueCurse(LivingEntity entity) {
+        return entity.hasStatusEffect(EffectRegister.PHANTOMESQUE_CURSE);
+    }
+
 
     // Misc (Tooltip, Is Of Spells, etc.)
 

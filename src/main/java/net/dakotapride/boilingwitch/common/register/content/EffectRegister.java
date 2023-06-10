@@ -2,7 +2,6 @@ package net.dakotapride.boilingwitch.common.register.content;
 
 import net.dakotapride.boilingwitch.common.effect.HoistingEffect;
 import net.dakotapride.boilingwitch.common.effect.InsanityEffect;
-import net.dakotapride.boilingwitch.common.effect.PhantomesqueEffect;
 import net.dakotapride.boilingwitch.common.effect.curse.*;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -33,12 +32,12 @@ public class EffectRegister {
                     -0.2, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
     public static StatusEffect BOILING_CURSE = registerEffect("boiling_curse", new BoilingCurseEffect());
 
+    public static StatusEffect PHANTOMESQUE_CURSE = registerEffect("phantomesque_curse", new PhantomesqueCurseEffect());
+
 
     // Non-curses
     public static StatusEffect HOISTING = registerEffect("hoisting", new HoistingEffect());
     public static StatusEffect INSANITY = registerEffect("insanity", new InsanityEffect());
-
-    public static StatusEffect PHANTOMESQUE = registerEffect("phantomesque", new PhantomesqueEffect());
 
     public static void register() {}
 
