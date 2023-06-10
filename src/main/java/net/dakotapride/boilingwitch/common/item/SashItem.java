@@ -9,8 +9,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class GaldorstoneItem extends Item {
-    public GaldorstoneItem(Settings settings) {
+public class SashItem extends Item {
+    public SashItem(Settings settings) {
         super(settings);
     }
 

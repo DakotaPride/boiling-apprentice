@@ -1,7 +1,6 @@
 package net.dakotapride.boilingwitch.common;
 
-import dev.architectury.event.events.common.TickEvent;
-import net.dakotapride.boilingwitch.common.event.FlightEvent;
+import net.dakotapride.boilingwitch.common.config.BoilingWitchConfigs;
 import net.dakotapride.boilingwitch.common.register.content.*;
 import net.dakotapride.boilingwitch.common.register.content.biome.BoilingWitchBiomes;
 import net.dakotapride.boilingwitch.common.register.content.feature.PlacedFeatureRegister;
@@ -33,15 +32,14 @@ public class BoilingWitchMod implements ModInitializer {
 
 		BoilingWitchBiomes.register();
 
+		BoilingWitchConfigs.registerConfigs();
+
 		GeckoLib.initialize();
 
 		FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(modContainer ->
 				ResourceManagerHelper.registerBuiltinResourcePack(new Identifier(MOD_ID, "no3d"),
 						modContainer, ResourcePackActivationType.NORMAL));
 
-		// Events
-
-		TickEvent.Player.PLAYER_PRE.register(new FlightEvent());
 	}
 
 }
