@@ -22,6 +22,5 @@ public class GaldorstoneItem extends Item {
             tooltip.add(Text.literal("Uses: " + stack.getNbt().getInt("riftUses")).formatted(Formatting.ITALIC).formatted(Formatting.GRAY));
         }
 
-        // tooltip.add(Text.translatable(Letter.allowForTooltip(stack)));
     }
 }
