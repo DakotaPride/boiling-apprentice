@@ -1,5 +1,6 @@
 package net.dakotapride.boilingwitch.common.register.content;
 
+import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import net.dakotapride.boilingwitch.common.effect.HoistingEffect;
 import net.dakotapride.boilingwitch.common.effect.InsanityEffect;
 import net.dakotapride.boilingwitch.common.effect.curse.*;
@@ -32,7 +33,17 @@ public class EffectRegister {
                     -0.2, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
     public static StatusEffect BOILING_CURSE = registerEffect("boiling_curse", new BoilingCurseEffect());
 
-    public static StatusEffect PHANTOMESQUE_CURSE = registerEffect("phantomesque_curse", new PhantomesqueCurseEffect());
+    // Reach Related Curses
+    public static StatusEffect PHANTOMESQUE_CURSE = registerEffect("phantomesque_curse", new PhantomesqueCurseEffect()
+            .addAttributeModifier(ReachEntityAttributes.REACH, "8a944592-387b-47c5-be34-1fe1218eb43a",
+                    2.75, EntityAttributeModifier.Operation.ADDITION)
+            .addAttributeModifier(ReachEntityAttributes.ATTACK_RANGE, "889cbf0a-a4aa-420e-86e6-735c550bbb3d",
+                    2.75, EntityAttributeModifier.Operation.ADDITION));
+    public static StatusEffect BINDING_CURSE = registerEffect("binding_curse", new PhantomesqueCurseEffect()
+            .addAttributeModifier(ReachEntityAttributes.REACH, "99caa763-d7e3-4c91-8379-4cb379440739",
+                    -2.75, EntityAttributeModifier.Operation.ADDITION)
+            .addAttributeModifier(ReachEntityAttributes.ATTACK_RANGE, "5cc7fb3d-ee86-4438-862f-05141dc9adae",
+                    -2.75, EntityAttributeModifier.Operation.ADDITION));
 
 
     // Non-curses

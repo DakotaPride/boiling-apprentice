@@ -1,14 +1,12 @@
 package net.dakotapride.boilingwitch.common.item;
 
-import net.dakotapride.boilingwitch.common.item.magic.ISpellStoring;
+import com.google.common.collect.ImmutableList;
 import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
 import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -19,10 +17,24 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import net.minecraft.world.event.GameEvent;
 
-public class ElixirItem extends Item implements ISpellStoring {
+public class MysteryElixerItem extends ElixirItem  {
+    ImmutableList<StatusEffect> effects;
 
-    public ElixirItem(Settings settings) {
+    public MysteryElixerItem(Settings settings) {
         super(settings);
+
+        ImmutableList.Builder<StatusEffect> builder = ImmutableList.builder();
+
+        builder.add(EffectRegister.AVIAN_CURSE);
+        builder.add(EffectRegister.VULTURE_CURSE);
+        builder.add(EffectRegister.DEVIANCY_CURSE);
+        builder.add(EffectRegister.UNGUARDED_CURSE);
+        builder.add(EffectRegister.BOILING_CURSE);
+        builder.add(EffectRegister.PHANTOMESQUE_CURSE);
+        builder.add(EffectRegister.BINDING_CURSE);
+
+
+        this.effects = builder.build();
     }
 
     @Override
@@ -47,21 +59,6 @@ public class ElixirItem extends Item implements ISpellStoring {
             Criteria.CONSUME_ITEM.trigger(serverPlayer, stack);
         }
 
-        if (!world.isClient) {
-            if (stack.isOf(ItemRegister.AVIAN_CURSE_ELIXIR)) {
-                if (hasAvianCurse(user)) {
-                    user.removeStatusEffect(EffectRegister.AVIAN_CURSE);
-
-                    if (!(user.hasStatusEffect(StatusEffects.INVISIBILITY))) {
-                        user.setInvisible(false);
-                    }
-                } else {
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, 300, 1));
-                    user.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 300, 2));
-                }
-            }
-        }
-
         if (playerEntity != null) {
             playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
             if (!playerEntity.getAbilities().creativeMode) {
@@ -82,9 +79,4 @@ public class ElixirItem extends Item implements ISpellStoring {
         user.emitGameEvent(GameEvent.DRINK);
         return stack;
     }
-
-    //  @Override
-    //  public int ME(int energy) {
-    //      return 12;
-    //  }
 }
