@@ -38,12 +38,16 @@ public class EffectRegister {
             .addAttributeModifier(ReachEntityAttributes.REACH, "8a944592-387b-47c5-be34-1fe1218eb43a",
                     2.75, EntityAttributeModifier.Operation.ADDITION)
             .addAttributeModifier(ReachEntityAttributes.ATTACK_RANGE, "889cbf0a-a4aa-420e-86e6-735c550bbb3d",
-                    2.75, EntityAttributeModifier.Operation.ADDITION));
-    public static StatusEffect BINDING_CURSE = registerEffect("binding_curse", new PhantomesqueCurseEffect()
+                    2.75, EntityAttributeModifier.Operation.ADDITION))
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "3f7d5e30-746c-46c8-b6bd-0183251fb28e",
+                    -2.0, EntityAttributeModifier.Operation.ADDITION);
+    public static StatusEffect CONSTRICTING_CURSE = registerEffect("constricting_curse", new ConstrictingCurseEffect()
             .addAttributeModifier(ReachEntityAttributes.REACH, "99caa763-d7e3-4c91-8379-4cb379440739",
-                    -2.75, EntityAttributeModifier.Operation.ADDITION)
+                    -0.75, EntityAttributeModifier.Operation.ADDITION)
             .addAttributeModifier(ReachEntityAttributes.ATTACK_RANGE, "5cc7fb3d-ee86-4438-862f-05141dc9adae",
-                    -2.75, EntityAttributeModifier.Operation.ADDITION));
+                    -0.75, EntityAttributeModifier.Operation.ADDITION))
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "0a0d3261-aa42-4e47-98a6-794949244a37",
+                    4.0, EntityAttributeModifier.Operation.ADDITION);
 
 
     // Non-curses

@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"glass": "boilingwitch:item/potion/glass",
-		"liquid": "boilingwitch:item/potion/liquid/empty",
-		"particle": "#liquid"
+		"particle": "#liquid",
+		"liquid": "boilingwitch:item/potion/liquid/empty"
 	},
 	"elements": [
 		{

@@ -8,6 +8,7 @@ import net.dakotapride.boilingwitch.common.register.content.ScreenRegister;
 import net.dakotapride.boilingwitch.common.screen.screen.GlyphEnhancementScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.object.builder.v1.client.model.FabricModelPredicateProviderRegistry;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.util.Identifier;
@@ -36,6 +37,10 @@ public class BoilingWitchClient implements ClientModInitializer {
 		RenderLayer.getEntityTranslucent(new Identifier(BoilingWitchMod.MOD_ID, "textures/models/armor/visor.png"));
 
 		GeoArmorRenderer.registerArmorRenderer(new VisorRenderer(), ItemRegister.MASK_OF_PURITY);
+
+		// Model Predicates
+		FabricModelPredicateProviderRegistry.register(ItemRegister.OCARINA, new Identifier("curse"),
+				((stack, world, entity, seed) -> stack.hasNbt() ? 1f : 0f));
 
 	}
 }

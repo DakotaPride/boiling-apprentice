@@ -39,7 +39,7 @@ public class MysteryElixirItem extends ElixirItem  {
         builder.add(EffectRegister.UNGUARDED_CURSE);
         builder.add(EffectRegister.BOILING_CURSE);
         builder.add(EffectRegister.PHANTOMESQUE_CURSE);
-        builder.add(EffectRegister.BINDING_CURSE);
+        builder.add(EffectRegister.CONSTRICTING_CURSE);
 
 
         this.effects = builder.build();

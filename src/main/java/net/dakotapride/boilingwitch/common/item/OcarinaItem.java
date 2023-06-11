@@ -30,7 +30,7 @@ public class OcarinaItem extends Item {
         builder.add(EffectRegister.UNGUARDED_CURSE);
         builder.add(EffectRegister.BOILING_CURSE);
         builder.add(EffectRegister.PHANTOMESQUE_CURSE);
-        builder.add(EffectRegister.BINDING_CURSE);
+        builder.add(EffectRegister.CONSTRICTING_CURSE);
 
 
         this.getCurses = builder.build();
@@ -41,10 +41,15 @@ public class OcarinaItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
 
-        user.removeStatusEffect(getCurses.get(itemStack.getNbt().getInt("curseEffect")));
+        if (itemStack.hasNbt()) {
+            user.removeStatusEffect(getCurses.get(itemStack.getNbt().getInt("curseEffect")));
 
-        user.getItemCooldownManager().set(this, 120);
-        return TypedActionResult.consume(itemStack);
+            user.getItemCooldownManager().set(this, 120);
+
+            return TypedActionResult.consume(itemStack);
+        }
+
+        return super.use(world, user, hand);
     }
 
     @Override

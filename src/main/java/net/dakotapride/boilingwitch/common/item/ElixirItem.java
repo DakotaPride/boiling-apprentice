@@ -7,6 +7,7 @@ import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -24,7 +25,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ElixirItem extends Item implements ISpellStoring {
+public class ElixirItem extends Item implements ISpellStoring, IWIP {
     ImmutableList<StatusEffect> getEffects;
 
     public ElixirItem(Settings settings) {
@@ -60,6 +61,9 @@ public class ElixirItem extends Item implements ISpellStoring {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+
+        getWorkInProgressTooltip(tooltip);
+
         if (stack.hasNbt()) {
             tooltip.add(Text.translatable("text.effect." + stack.getNbt().getString("effectKey")));
         }
@@ -92,6 +96,10 @@ public class ElixirItem extends Item implements ISpellStoring {
         }
 
         if (stack.hasNbt()) {
+            if (playerEntity != null) {
+                playerEntity.addStatusEffect(new StatusEffectInstance(getEffects.get(stack.getNbt().getInt("effectValue")), 800));
+            }
+
             if (playerEntity != null) {
                 playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
                 if (!playerEntity.getAbilities().creativeMode) {

@@ -1,6 +1,0 @@
-{
-  "parent": "boilingwitch:item/elixir_empty",
-  "textures": {
-    "liquid": "boilingwitch:item/potion/liquid/avian_healing_elixir"
-  }
-}
