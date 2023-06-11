@@ -73,6 +73,9 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item EMPTY_ELIXIR = registerItem("elixir_empty",
             new Item(new FabricItemSettings().maxCount(16).group(BOILING_WITCH_GROUP)));
 
+    public static Item MYSTERY_ELIXIR = registerItem("elixir_mystery",
+            new MysteryElixirItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     // Miscellaneous Items
     public static Item RESTING_NETTLE_STEW = registerItem("nettle_stew",
             new StewItem(new FabricItemSettings().maxCount(1).food(FoodComponentRegister.RESTING_NETTLE_STEW_FOOD_COMPONENT).group(BOILING_WITCH_GROUP)));
