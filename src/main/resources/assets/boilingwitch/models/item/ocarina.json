@@ -10,7 +10,7 @@
 		{
 			"model": "boilingwitch:item/ocarina/avian",
 			"predicate": {
-				"avian": 1
+				"curse": 1
 			}
 		}
 	],
