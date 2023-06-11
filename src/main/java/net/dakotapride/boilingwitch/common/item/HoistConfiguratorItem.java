@@ -1,14 +1,9 @@
 package net.dakotapride.boilingwitch.common.item;
 
-import net.dakotapride.boilingwitch.common.item.magic.MysticItem;
+import net.minecraft.item.Item;
 
-public class HoistConfiguratorItem extends MysticItem {
+public class HoistConfiguratorItem extends Item {
     public HoistConfiguratorItem(Settings settings) {
         super(settings);
     }
-
-    //  @Override
-    //  public int ME(int energy) {
-    //      return 32;
-    //  }
 }

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "ocarina",
+  "pattern": [
+    "XA ",
+    "#C#"
+  ],
+
+  "key": {
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "tag": "minecraft:wool"
+    },
+    "X": {
+      "item": "minecraft:leather"
+    },
+    "A": {
+      "item": "minecraft:magma_cream"
+    }
+  },
+
+  "result": {
+    "item": "boilingwitch:ocarina",
+    "count": 1,
+
+    "data": {
+      "curseEffect": 4,
+      "curseKey": "boiling"
+    }
+  }
+}

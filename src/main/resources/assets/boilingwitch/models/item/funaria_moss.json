@@ -1,0 +1,91 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "boilingwitch:item/funaria_moss",
+		"particle": "boilingwitch:item/funaria_moss"
+	},
+	"elements": [
+		{
+			"from": [3, 11, 3],
+			"to": [13, 11, 13],
+			"rotation": {"angle": 0, "axis": "x", "origin": [8, 11, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"east": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"south": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"west": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"up": {"uv": [5, 5, 0, 0], "texture": "#0"},
+				"down": {"uv": [5, 5, 0, 10], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 11, 8],
+			"to": [13, 11, 13],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 11, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"east": {"uv": [0, 0, 2.5, 0], "texture": "#0"},
+				"south": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"west": {"uv": [0, 0, 2.5, 0], "texture": "#0"},
+				"up": {"uv": [10, 2.5, 5, 0], "texture": "#0"},
+				"down": {"uv": [10, 2.5, 5, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 11, 3],
+			"to": [13, 11, 8],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 11, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"east": {"uv": [0, 0, 2.5, 0], "texture": "#0"},
+				"south": {"uv": [0, 0, 5, 0], "texture": "#0"},
+				"west": {"uv": [0, 0, 2.5, 0], "texture": "#0"},
+				"up": {"uv": [10, 2.5, 5, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [10, 2.5, 5, 5], "rotation": 180, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-118.96, 64.83, 168.36],
+			"translation": [-1.25, -0.5, -1.25],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-118.96, 64.83, 168.36],
+			"translation": [-1.25, -0.5, -1.25],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 25, 29.25],
+			"translation": [1.75, 0, -0.25],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 25, 29.25],
+			"translation": [1.75, 0, -0.25],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"ground": {
+			"rotation": [27.63, -0.73, 4.7]
+		},
+		"gui": {
+			"rotation": [25, -45, 0],
+			"translation": [0, -3, 0],
+			"scale": [1.1, 1.1, 1.1]
+		},
+		"fixed": {
+			"rotation": [-90, 0, 0],
+			"translation": [-0.5, 0, 3.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "moss",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

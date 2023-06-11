@@ -1,19 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
+  "group": "elixir",
+  "pattern": [
+    "X#X",
+    "X X",
+    "XXX"
+  ],
   "key": {
-    "#": {
+    "X": {
       "item": "minecraft:glass"
     },
-    "X": {
+    "#": {
       "item": "minecraft:leather"
     }
   },
-  "pattern": [
-    "#X#",
-    "# #",
-    "###"
-  ],
   "result": {
-    "item": "boilingwitch:elixir_empty"
+    "item": "boilingwitch:elixir",
+    "count": 1
   }
 }

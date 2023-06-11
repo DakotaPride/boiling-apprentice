@@ -68,10 +68,8 @@ public class ItemRegister implements IBoilingWitchItemGroup {
             new ParchmentItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
 
     // Elixir Items
-    public static Item AVIAN_CURSE_ELIXIR = registerItem("elixir_avian",
-            new ElixirItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
-    public static Item EMPTY_ELIXIR = registerItem("elixir_empty",
-            new Item(new FabricItemSettings().maxCount(16).group(BOILING_WITCH_GROUP)));
+    public static Item ELIXIR = registerItem("elixir",
+            new ElixirItem(new FabricItemSettings().maxCount(16).group(BOILING_WITCH_GROUP)));
 
     public static Item MYSTERY_ELIXIR = registerItem("elixir_mystery",
             new MysteryElixirItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
@@ -95,6 +93,12 @@ public class ItemRegister implements IBoilingWitchItemGroup {
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     public static Item FRACTURED_CORE = registerItem("fractured_core",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
+    public static Item OCARINA = registerItem("ocarina",
+            new OcarinaItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+
+    public static Item FUNARIA_MOSS = registerItem("funaria_moss",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     // Brewing Advancing Items

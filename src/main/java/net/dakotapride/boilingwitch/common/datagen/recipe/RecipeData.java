@@ -83,29 +83,6 @@ public class RecipeData extends FabricRecipeProvider {
 
         // TODO: Expand Upon The Existing Glyph System And Add More Abilities to Already Existing Glyphs
 
-        // Potions
-        ShapedRecipeJsonBuilder.create(ItemRegister.EMPTY_ELIXIR)
-                .pattern("#X#")
-                .pattern("# #")
-                .pattern("###")
-                .input('#', Items.GLASS)
-                .criterion("has_glass", RecipeProvider.conditionsFromItem(Items.GLASS))
-                .input('X', Items.LEATHER)
-                .criterion("has_leather", RecipeProvider.conditionsFromItem(Items.LEATHER))
-                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.EMPTY_ELIXIR)));
-
-        String potions = "potions/"; // TODO: Implement More Into The Potions System
-        ShapelessRecipeJsonBuilder.create(ItemRegister.AVIAN_CURSE_ELIXIR)
-                .input(ItemRegister.EMPTY_ELIXIR)
-                .criterion("has_empty_potion", RecipeProvider.conditionsFromItem(ItemRegister.EMPTY_ELIXIR))
-                .input(Items.FEATHER)
-                .criterion("has_feather", RecipeProvider.conditionsFromItem(Items.FEATHER))
-                .input(Items.GOLDEN_APPLE)
-                .criterion("has_golden_apple", RecipeProvider.conditionsFromItem(Items.GOLDEN_APPLE))
-                .input(ItemRegister.RESTING_NETTLE_STEW)
-                .criterion("has_resting_nettle_stew", RecipeProvider.conditionsFromItem(ItemRegister.RESTING_NETTLE_STEW))
-                .offerTo(exporter, new Identifier(potions + "helpful/owl_curse"));
-
         ShapedRecipeJsonBuilder.create(ItemRegister.MASK_OF_PURITY)
                 .pattern(" # ")
                 .pattern("AXA")
