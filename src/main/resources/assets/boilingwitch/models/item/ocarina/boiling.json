@@ -1,0 +1,6 @@
+{
+  "parent": "boilingwitch:item/ocarina",
+  "textures": {
+    "1": "boilingwitch:item/ocarina/effect/boiling"
+  }
+}
