@@ -27,7 +27,8 @@
 
     "data": {
       "curseEffect": 2,
-      "curseKey": "deviancy"
+      "curseKey": "deviancy",
+      "curse": 0.75
     }
   }
 }

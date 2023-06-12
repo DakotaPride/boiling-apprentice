@@ -27,7 +27,8 @@
 
     "data": {
       "curseEffect": 0,
-      "curseKey": "avian"
+      "curseKey": "avian",
+      "curse": 0.15
     }
   }
 }

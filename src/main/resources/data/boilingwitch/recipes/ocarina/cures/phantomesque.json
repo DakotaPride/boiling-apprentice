@@ -27,7 +27,8 @@
 
     "data": {
       "curseEffect": 5,
-      "curseKey": "phantomesque"
+      "curseKey": "phantomesque",
+      "curse": 0.9
     }
   }
 }

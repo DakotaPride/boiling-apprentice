@@ -27,7 +27,8 @@
 
     "data": {
       "curseEffect": 3,
-      "curseKey": "unguarded"
+      "curseKey": "unguarded",
+      "curse": 0.45
     }
   }
 }

@@ -27,7 +27,8 @@
 
     "data": {
       "curseEffect": 6,
-      "curseKey": "binding"
+      "curseKey": "constricting",
+      "curse": 1.0
     }
   }
 }

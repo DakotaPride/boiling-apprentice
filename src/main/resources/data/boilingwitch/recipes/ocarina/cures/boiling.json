@@ -27,7 +27,8 @@
 
     "data": {
       "curseEffect": 4,
-      "curseKey": "boiling"
+      "curseKey": "boiling",
+      "curse": 0.6
     }
   }
 }
