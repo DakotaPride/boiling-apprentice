@@ -1,7 +1,4 @@
 {
-  "item.boilingwitch.elixir_empty": "Empty Elixir Bottle",
-  "item.boilingwitch.elixir_avian": "Elixir",
-
   "item.boilingwitch.ocarina": "Ocarina",
 
   "item.boilingwitch.fairy_cake": "Fairy Cake",
@@ -12,7 +9,7 @@
   "text.boilingwitch.cures.unguarded": "Cures The User Of The Unguarded Curse",
   "text.boilingwitch.cures.boiling": "Cures The User Of The Boiling Curse",
   "text.boilingwitch.cures.phantomesque": "Cures The User Of The Phantomesque Curse",
-  "text.boilingwitch.cures.binding": "Cures The User Of The Binding Curse",
+  "text.boilingwitch.cures.constricting": "Cures The User Of The Constricting Curse",
   "text.boilingwitch.cure.unavailable": "No Cure Is Accessible On this Ocarina",
 
   "advancement.boilingwitch.obtain_fairy_cake.title": "No Cake Pants?",

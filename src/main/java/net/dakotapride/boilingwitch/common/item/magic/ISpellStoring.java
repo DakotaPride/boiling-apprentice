@@ -5,6 +5,7 @@ import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
 import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
@@ -62,8 +63,12 @@ public interface ISpellStoring extends IGlyph {
 
     // Remove Effect
     default void onRemoveVultureCurseFromTarget(LivingEntity entity, double exhaustion, int amplifier) {
-        regenerateHealthFromCurse(16.0F, entity, new StatusEffectInstance(EffectRegister.VULTURE_CURSE));
+        createStatusEffectFromCurse(entity, StatusEffects.SLOWNESS, 400, 1);
         ((PlayerEntity)entity).addExhaustion((int) exhaustion * (float)(amplifier + 1));
+    }
+
+    default void createStatusEffectFromCurse(LivingEntity entity, StatusEffect effect, int duration, int amplifier) {
+        entity.addStatusEffect(new StatusEffectInstance(effect, duration, amplifier));
     }
 
     default void regenerateHealthFromCurse(float regenerateHealth, LivingEntity entity, StatusEffectInstance effectInstance) {

@@ -43,10 +43,23 @@ public class BoilingWitchClient implements ClientModInitializer {
 			} else if (stack.getNbt() != null) {
 				return stack.getNbt().contains("curse") ? stack.getNbt().getFloat("curse") : 0.0F;
 			} else {
-				return 1.0F;
+				return 0.0F;
 			}
 
 		});
+
+		ModelPredicateProviderRegistry.register(ItemRegister.ELIXIR,
+				new Identifier("effect"),
+				(stack, world, entity, seed) -> {
+
+					if (entity == null) {
+						return 0.0F;
+					} else if (stack.getNbt() != null) {
+						return stack.getNbt().contains("effect") ? stack.getNbt().getFloat("effect") : 0.0F;
+					} else {
+						return 0.0F;
+					}
+				});
 
 	}
 }

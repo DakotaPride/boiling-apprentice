@@ -1,0 +1,8 @@
+{
+  "ocarina_curing_curse": {
+    "subtitle": "boilingwitch.ocarina.curse_cured",
+    "sounds": [
+      "boilingwitch:ocarina/curse_cured"
+    ]
+  }
+}

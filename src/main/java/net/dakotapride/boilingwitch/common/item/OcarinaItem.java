@@ -2,11 +2,13 @@ package net.dakotapride.boilingwitch.common.item;
 
 import com.google.common.collect.ImmutableList;
 import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
+import net.dakotapride.boilingwitch.common.register.content.SoundEventRegister;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -42,6 +44,9 @@ public class OcarinaItem extends Item {
         user.setCurrentHand(hand);
 
         if (itemStack.hasNbt()) {
+            world.playSound(user, user.getBlockPos(), SoundEventRegister.CURSE_CURED_FROM_OCARINA,
+                    SoundCategory.PLAYERS, 0.8f, 1.0f);
+
             user.removeStatusEffect(getCurses.get(itemStack.getNbt().getInt("curseEffect")));
 
             user.getItemCooldownManager().set(this, 120);

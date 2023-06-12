@@ -11,6 +11,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -48,6 +49,11 @@ public class BoilingWitchRegistration {
 
     public static Enchantment registerEnchantment(String name, Enchantment enchantment) {
         return Registry.register(Registry.ENCHANTMENT, new Identifier(BoilingWitchMod.MOD_ID, name), enchantment);
+    }
+
+    public static SoundEvent registerSoundEvent(String name) {
+        Identifier id = new Identifier(BoilingWitchMod.MOD_ID, name);
+        return Registry.register(Registry.SOUND_EVENT, id, new SoundEvent(id));
     }
 
     public static FoodComponent nettleStewBuilder() {
