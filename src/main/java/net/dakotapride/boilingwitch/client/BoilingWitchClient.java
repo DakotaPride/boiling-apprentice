@@ -37,7 +37,6 @@ public class BoilingWitchClient implements ClientModInitializer {
 		ModelPredicateProviderRegistry.register(ItemRegister.OCARINA,
 				new Identifier("curse"),
 				(stack, world, entity, seed) -> {
-
 			if (entity == null) {
 				return 0.0F;
 			} else if (stack.getNbt() != null) {
@@ -45,7 +44,17 @@ public class BoilingWitchClient implements ClientModInitializer {
 			} else {
 				return 0.0F;
 			}
-
+		});
+		ModelPredicateProviderRegistry.register(ItemRegister.OCARINA,
+				new Identifier("immortal"),
+				(stack, world, entity, seed) -> {
+			if (entity == null) {
+				return 0.0F;
+			} else if (stack.getNbt() != null) {
+				return stack.getNbt().contains("immortal") ? 1.0F : 0.0F;
+			} else {
+				return 0.0F;
+			}
 		});
 
 		ModelPredicateProviderRegistry.register(ItemRegister.ELIXIR,
