@@ -1,0 +1,6 @@
+{
+  "parent": "boilingwitch:item/elixir",
+  "textures": {
+    "liquid": "boilingwitch:item/potion/liquid/invisibility"
+  }
+}

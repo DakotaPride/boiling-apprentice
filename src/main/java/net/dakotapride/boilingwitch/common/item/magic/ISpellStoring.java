@@ -52,14 +52,19 @@ public interface ISpellStoring extends IGlyph {
     }
 
     // Add Effects
+
     default void provideVultureSideEffects(LivingEntity entity) {
-        provideTargetWithSideEffectsFromCurse(true, 10.0F, entity, DamageSourceRegister.VULTURE_RETRIBUTION);
+        provideTargetWithDamageFromCurse(10.0F, entity, DamageSourceRegister.VULTURE_RETRIBUTION);
     }
 
-    default void provideTargetWithSideEffectsFromCurse(boolean damagesTarget, float damageAmount, LivingEntity entity, DamageSource source) {
-        if (damagesTarget) {
-            entity.damage(source, damageAmount);
-        } else {}
+    default void provideTargetWithDamageFromCurse(float damageAmount, LivingEntity entity, DamageSource source) {
+        entity.damage(source, damageAmount);
+    }
+
+    default void provideTargetWithHungerFromCurse(float exhaustion, LivingEntity entity) {
+        if (entity instanceof PlayerEntity player) {
+            player.addExhaustion(exhaustion);
+        }
     }
 
     // Remove Effect

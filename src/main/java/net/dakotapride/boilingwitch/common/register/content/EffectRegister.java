@@ -32,8 +32,6 @@ public class EffectRegister {
             .addAttributeModifier(EntityAttributes.GENERIC_ARMOR, "9e6749cb-51d7-4429-be56-18a220c0c92a",
                     -0.2, EntityAttributeModifier.Operation.MULTIPLY_TOTAL));
     public static StatusEffect BOILING_CURSE = registerEffect("boiling_curse", new BoilingCurseEffect());
-
-    // Reach Related Curses
     public static StatusEffect PHANTOMESQUE_CURSE = registerEffect("phantomesque_curse", new PhantomesqueCurseEffect()
             .addAttributeModifier(ReachEntityAttributes.REACH, "8a944592-387b-47c5-be34-1fe1218eb43a",
                     2.75, EntityAttributeModifier.Operation.ADDITION)
@@ -48,6 +46,10 @@ public class EffectRegister {
                     -1.15, EntityAttributeModifier.Operation.ADDITION))
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "0a0d3261-aa42-4e47-98a6-794949244a37",
                     4.0, EntityAttributeModifier.Operation.ADDITION);
+    public static StatusEffect REJUVENATION_CURSE = registerEffect("rejuvenation_curse", new RejuvenationCurseEffect());
+    public static StatusEffect REVITALIZATION_CURSE = registerEffect("revitalization_curse", new RevitalizationCurseEffect()
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "6e3a453b-a594-4a83-aa7d-742cfdf226ce",
+                    6.0, EntityAttributeModifier.Operation.ADDITION));
 
 
     // Non-curses
