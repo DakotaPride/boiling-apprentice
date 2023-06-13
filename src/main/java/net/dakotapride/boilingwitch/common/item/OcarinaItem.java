@@ -1,6 +1,7 @@
 package net.dakotapride.boilingwitch.common.item;
 
 import com.google.common.collect.ImmutableList;
+import net.dakotapride.boilingwitch.common.config.BoilingWitchConfigs;
 import net.dakotapride.boilingwitch.common.register.content.EffectRegister;
 import net.dakotapride.boilingwitch.common.register.content.SoundEventRegister;
 import net.minecraft.client.item.TooltipContext;
@@ -23,7 +24,7 @@ public class OcarinaItem extends Item {
     ImmutableList<StatusEffect> getCurses;
 
     public OcarinaItem(Settings settings) {
-        super(settings.maxDamage(8));
+        super(settings);
 
         ImmutableList.Builder<StatusEffect> builder = ImmutableList.builder();
 
@@ -49,7 +50,7 @@ public class OcarinaItem extends Item {
             if (user.hasStatusEffect(getCurses.get(stack.getNbt().getInt("curseEffect")))) {
 
                 world.playSound(user, user.getBlockPos(), SoundEventRegister.CURSE_CURED_FROM_OCARINA,
-                        SoundCategory.RECORDS, 1.0F, 1.0F);
+                        SoundCategory.RECORDS, (float) BoilingWitchConfigs.OCARINA_CURED_CURSE_VOLUME, 1.0F);
 
                 user.getItemCooldownManager().set(this, 120);
 
@@ -59,7 +60,7 @@ public class OcarinaItem extends Item {
             } else if (!user.hasStatusEffect(getCurses.get(stack.getNbt().getInt("curseEffect")))) {
 
                 world.playSound(user, user.getBlockPos(), SoundEventRegister.OCARINA_HARMED_FROM_WRONGFUL_USE,
-                        SoundCategory.RECORDS, 1.0f, 1.0f);
+                        SoundCategory.RECORDS, (float) BoilingWitchConfigs.OCARINA_HARMED_INSTRUMENT_VOLUME, 1.0F);
 
                 user.getItemCooldownManager().set(this, 240);
 

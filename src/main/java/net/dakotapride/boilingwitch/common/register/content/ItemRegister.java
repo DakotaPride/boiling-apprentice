@@ -1,6 +1,7 @@
 package net.dakotapride.boilingwitch.common.register.content;
 
 import net.dakotapride.boilingwitch.common.IBoilingWitchItemGroup;
+import net.dakotapride.boilingwitch.common.config.BoilingWitchConfigs;
 import net.dakotapride.boilingwitch.common.datagen.tag.InstrumentTagData;
 import net.dakotapride.boilingwitch.common.item.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -99,7 +100,7 @@ public class ItemRegister implements IBoilingWitchItemGroup {
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     public static Item OCARINA = registerItem("ocarina",
-            new OcarinaItem(new FabricItemSettings().maxCount(1).maxDamage(8).group(BOILING_WITCH_GROUP)));
+            new OcarinaItem(new FabricItemSettings().maxDamage(BoilingWitchConfigs.OCARINA_DURABILITY).group(BOILING_WITCH_GROUP)));
     public static Item OCARINA_IMMORTAL = registerItem("ocarina_immortal",
             new ImmortalOcarinaItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP), InstrumentTagData.OCARINA_MUSICAL_EFFECTS));
 

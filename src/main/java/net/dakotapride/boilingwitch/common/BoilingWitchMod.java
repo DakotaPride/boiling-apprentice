@@ -19,6 +19,8 @@ public class BoilingWitchMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		BoilingWitchConfigs.registerConfigs();
+
 		BlockRegister.register();
 		ItemRegister.register();
 		EffectRegister.register();
@@ -34,8 +36,6 @@ public class BoilingWitchMod implements ModInitializer {
 		PlacedFeatureRegister.init();
 
 		BoilingWitchBiomes.register();
-
-		BoilingWitchConfigs.registerConfigs();
 
 		GeckoLib.initialize();
 

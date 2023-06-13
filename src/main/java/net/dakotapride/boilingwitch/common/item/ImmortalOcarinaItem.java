@@ -1,9 +1,13 @@
 package net.dakotapride.boilingwitch.common.item;
 
+import net.dakotapride.boilingwitch.common.config.BoilingWitchConfigs;
 import net.dakotapride.boilingwitch.common.register.content.ItemRegister;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.Instrument;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
@@ -37,12 +41,18 @@ public class ImmortalOcarinaItem extends Item {
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         super.appendTooltip(stack, world, tooltip, context);
 
-        tooltip.add(Text.literal("[DEV] Feature"));
+        if (!BoilingWitchConfigs.ALLOW_FOR_IMMORTAL_OCARINA) {
+            tooltip.add(Text.literal("This feature is disabled!").formatted(Formatting.RED));
+            tooltip.add(Text.literal("Config File: boilingwitch/ocarina.properties").formatted(Formatting.GRAY));
+        }
 
         Optional<RegistryKey<Instrument>> optional = this.getInstrument(stack).flatMap(RegistryEntry::getKey);
-        if (optional.isPresent()) {
+        if (optional.isPresent() && BoilingWitchConfigs.ALLOW_FOR_IMMORTAL_OCARINA) {
+            tooltip.add(Text.literal("This feature is incomplete!").formatted(Formatting.RED));
+            tooltip.add(Text.literal("This feature may cause crashes!").formatted(Formatting.RED));
             MutableText mutableText = Text.translatable(Util.createTranslationKey("instrument", optional.get().getValue()));
             tooltip.add(mutableText.formatted(Formatting.GRAY));
+            tooltip.add(Text.literal("Config File: boilingwitch/ocarina.properties").formatted(Formatting.GRAY));
         }
 
     }
@@ -67,7 +77,7 @@ public class ImmortalOcarinaItem extends Item {
 
     @Override
     public void appendStacks(ItemGroup group, DefaultedList<ItemStack> stacks) {
-        if (this.isIn(group)) {
+        if (this.isIn(group) && BoilingWitchConfigs.ALLOW_FOR_IMMORTAL_OCARINA) {
 
             for (RegistryEntry<Instrument> instrumentRegistryEntry : Registry.INSTRUMENT.iterateEntries(this.instrumentTag)) {
                 stacks.add(getStackForInstrument(ItemRegister.OCARINA_IMMORTAL, instrumentRegistryEntry));
@@ -80,7 +90,7 @@ public class ImmortalOcarinaItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         Optional<RegistryEntry<Instrument>> optional = this.getInstrument(itemStack);
-        if (optional.isPresent()) {
+        if (optional.isPresent() && BoilingWitchConfigs.ALLOW_FOR_IMMORTAL_OCARINA) {
             Instrument instrument = (Instrument)((RegistryEntry<?>)optional.get()).value();
             user.setCurrentHand(hand);
             playSound(world, user, instrument);
@@ -112,7 +122,11 @@ public class ImmortalOcarinaItem extends Item {
 
     @Override
     public UseAction getUseAction(ItemStack stack) {
-        return UseAction.TOOT_HORN;
+        if (BoilingWitchConfigs.ALLOW_FOR_IMMORTAL_OCARINA) {
+            return UseAction.TOOT_HORN;
+        } else {
+            return super.getUseAction(stack);
+        }
     }
 
     private static void playSound(World world, PlayerEntity player, Instrument instrument) {
