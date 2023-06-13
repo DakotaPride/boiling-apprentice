@@ -25,15 +25,15 @@ public class ParchmentItem extends Item implements ISpellStoring {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (isAvianParchment(stack.getItem())) {
-            setSpellTooltip(tooltip, stack, parchmentMedium, ".avian");
+            setSpellTooltip(tooltip, stack, parchmentMedium, "avian");
         } else if (isVultureParchment(stack.getItem())) {
-            setSpellTooltip(tooltip, stack, parchmentMedium, ".vulture");
+            setSpellTooltip(tooltip, stack, parchmentMedium, "vulture");
         } else if (isUnguardedParchment(stack.getItem())) {
-            setSpellTooltip(tooltip, stack, parchmentMedium, ".unguarded");
+            setSpellTooltip(tooltip, stack, parchmentMedium, "unguarded");
         } else if (isDeviancyParchment(stack.getItem())) {
-            setSpellTooltip(tooltip, stack, parchmentMedium, ".deviancy");
+            setSpellTooltip(tooltip, stack, parchmentMedium, "deviancy");
         } else if (isBoilingParchment(stack.getItem())) {
-            setSpellTooltip(tooltip, stack, parchmentMedium, ".boiling");
+            setSpellTooltip(tooltip, stack, parchmentMedium, "boiling");
         }
 
         super.appendTooltip(stack, world, tooltip, context);

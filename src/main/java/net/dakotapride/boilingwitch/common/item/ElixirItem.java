@@ -13,9 +13,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.stat.Stats;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
@@ -25,7 +27,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class ElixirItem extends Item implements ISpellStoring, IWIP {
+public class ElixirItem extends Item implements ISpellStoring {
     ImmutableList<StatusEffect> getEffects;
 
     public ElixirItem(Settings settings) {
@@ -61,17 +63,20 @@ public class ElixirItem extends Item implements ISpellStoring, IWIP {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-
-        getWorkInProgressTooltip(tooltip);
-
-        if (stack.hasNbt()) {
-            tooltip.add(Text.translatable("text.effect." + stack.getNbt().getString("effectKey")));
+        if (stack.getNbt() != null && stack.getNbt().getBoolean("hasEffect")) {
+            tooltip.add(Text.translatable("text.effect." + stack.getNbt().getString("effectKey")).formatted(Formatting.GRAY));
+        } else if (stack.getNbt() != null && !stack.getNbt().getBoolean("hasEffect") || !stack.hasNbt()) {
+            tooltip.add(Text.translatable("text.effect.none").formatted(Formatting.GRAY));
         }
     }
 
     @Override
     public int getMaxUseTime(ItemStack stack) {
-        return 32;
+        if (stack.getNbt() != null && stack.getNbt().getBoolean("hasEffect")) {
+            return 32;
+        } else {
+            return super.getMaxUseTime(stack);
+        }
     }
 
     @Override
@@ -81,7 +86,8 @@ public class ElixirItem extends Item implements ISpellStoring, IWIP {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        if (user.getStackInHand(hand).hasNbt()) {
+        NbtCompound nbt = user.getStackInHand(hand).getNbt();
+        if (nbt != null && nbt.getBoolean("hasEffect")) {
             return ItemUsage.consumeHeldItem(world, user, hand);
         }
 
@@ -90,30 +96,32 @@ public class ElixirItem extends Item implements ISpellStoring, IWIP {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
-        if (playerEntity instanceof ServerPlayerEntity serverPlayer) {
+        PlayerEntity player = user instanceof PlayerEntity ? (PlayerEntity)user : null;
+        NbtCompound nbt = stack.getNbt();
+
+        if (player instanceof ServerPlayerEntity serverPlayer) {
             Criteria.CONSUME_ITEM.trigger(serverPlayer, stack);
         }
 
-        if (stack.hasNbt()) {
-            if (playerEntity != null) {
-                playerEntity.addStatusEffect(new StatusEffectInstance(getEffects.get(stack.getNbt().getInt("effectValue")), 800));
+        if (nbt != null && nbt.getBoolean("hasEffect")) {
+            if (player != null && stack.getNbt() != null) {
+                player.addStatusEffect(new StatusEffectInstance(getEffects.get(nbt.getInt("effectValue")), 800));
             }
 
-            if (playerEntity != null) {
-                playerEntity.incrementStat(Stats.USED.getOrCreateStat(this));
-                if (!playerEntity.getAbilities().creativeMode) {
+            if (player != null) {
+                player.incrementStat(Stats.USED.getOrCreateStat(this));
+                if (!player.getAbilities().creativeMode) {
                     stack.decrement(1);
                 }
             }
 
-            if (playerEntity == null || !playerEntity.getAbilities().creativeMode) {
+            if (player == null || !player.getAbilities().creativeMode) {
                 if (stack.isEmpty()) {
                     return new ItemStack(ItemRegister.ELIXIR);
                 }
 
-                if (playerEntity != null) {
-                    playerEntity.getInventory().insertStack(new ItemStack(ItemRegister.ELIXIR));
+                if (player != null) {
+                    player.getInventory().insertStack(new ItemStack(ItemRegister.ELIXIR));
                 }
             }
 

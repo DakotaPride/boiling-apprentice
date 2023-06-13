@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ocarina_from_base",
+  "ingredients": [
+    {
+      "item": "boilingwitch:ocarina",
+      "require": {
+        "curse": 0
+      }
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    }
+  ],
+
+  "result": {
+    "item": "boilingwitch:ocarina",
+    "count": 1,
+
+    "data": {
+      "curseEffect": 2,
+      "curseKey": "deviancy",
+      "curse": 0.75
+    }
+  }
+}

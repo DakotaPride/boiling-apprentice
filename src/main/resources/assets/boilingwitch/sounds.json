@@ -4,5 +4,11 @@
     "sounds": [
       "boilingwitch:ocarina/curse_cured"
     ]
+  },
+  "ocarina_harmed": {
+    "subtitle": "boilingwitch.ocarina.harmed_instrument",
+    "sounds": [
+      "boilingwitch:ocarina/harmed"
+    ]
   }
 }

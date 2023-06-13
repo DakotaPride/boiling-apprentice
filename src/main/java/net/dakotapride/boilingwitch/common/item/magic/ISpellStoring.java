@@ -16,6 +16,7 @@ import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -63,11 +64,11 @@ public interface ISpellStoring extends IGlyph {
 
     // Remove Effect
     default void onRemoveVultureCurseFromTarget(LivingEntity entity, double exhaustion, int amplifier) {
-        createStatusEffectFromCurse(entity, StatusEffects.SLOWNESS, 400, 1);
+        createStatusEffectAsResultFromCurse(entity, StatusEffects.SLOWNESS, 400, 1);
         ((PlayerEntity)entity).addExhaustion((int) exhaustion * (float)(amplifier + 1));
     }
 
-    default void createStatusEffectFromCurse(LivingEntity entity, StatusEffect effect, int duration, int amplifier) {
+    default void createStatusEffectAsResultFromCurse(LivingEntity entity, StatusEffect effect, int duration, int amplifier) {
         entity.addStatusEffect(new StatusEffectInstance(effect, duration, amplifier));
     }
 
@@ -169,9 +170,9 @@ public interface ISpellStoring extends IGlyph {
 
     default void setSpellTooltip(List<Text> text, ItemStack stack, String spellMedium, String spellModifier) {
         if (!isOfCursedParchment(stack.getItem())) {
-            text.add(Text.translatable("text.boilingwitch.spell." + spellMedium + "." + spellModifier));
+            text.add(Text.translatable("text.boilingwitch.spell." + spellMedium + "." + spellModifier).formatted(Formatting.GRAY));
         } else {
-            text.add(Text.translatable("text.boilingwitch.spell." + spellMedium + "." + spellModifier + "." + curseValue));
+            text.add(Text.translatable("text.boilingwitch.spell." + spellMedium + "." + spellModifier + "." + curseValue).formatted(Formatting.GRAY));
         }
     }
 

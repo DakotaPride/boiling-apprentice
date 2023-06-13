@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"glass": "boilingwitch:item/potion/glass",
-		"particle": "#liquid",
+		"particle": "boilingwitch:item/potion/liquid/empty",
 		"liquid": "boilingwitch:item/potion/liquid/empty"
 	},
 	"elements": [
@@ -56,6 +56,9 @@
 			}
 		}
 	],
+	"overrides": [
+		{"model": "boilingwitch:item/elixir/speed", "predicate": {"effect": 0.05}}
+	],
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [6.21, -15.57, 11.2],
@@ -67,12 +70,12 @@
 		},
 		"firstperson_righthand": {
 			"rotation": [3.54, 12.95, -5.64],
-			"translation": [0, 8.75, 0.75],
+			"translation": [1.75, 8.75, 0.75],
 			"scale": [1.15625, 1.15625, 1.15625]
 		},
 		"firstperson_lefthand": {
 			"rotation": [3.54, 12.95, -5.64],
-			"translation": [0, 8.75, 0.75],
+			"translation": [1.75, 8.75, 0.75],
 			"scale": [1.15625, 1.15625, 1.15625]
 		},
 		"ground": {

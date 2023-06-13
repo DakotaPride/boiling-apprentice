@@ -1,7 +1,35 @@
 {
-  "item.boilingwitch.ocarina": "Ocarina",
+  "itemGroup.boilingwitch.boiling_witch": "Boiling Witch",
 
-  "item.boilingwitch.fairy_cake": "Fairy Cake",
+  // Elixir
+  "item.boilingwitch.elixir": "Elixir",
+  "item.boilingwitch.elixir_mystery": "Mysterious Elixir",
+
+  "text.mystery_elixir.effect": "Unknown Effect Available",
+  "text.effect.none": "No Effects Available",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.slowness": "Speed",
+  "text.effect.minecraft.invisibility": "Speed",
+  "text.effect.minecraft.haste": "Speed",
+  "text.effect.minecraft.slow_falling": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  "text.effect.minecraft.speed": "Speed",
+  // Brewing Enhancements
+  "item.boilingwitch.mask_of_purity": "Mask Of Purity",
+
+  // Ocarina
+  "item.boilingwitch.ocarina": "Ocarina",
 
   "text.boilingwitch.cures.avian": "Cures The User Of The Avian Curse",
   "text.boilingwitch.cures.vulture": "Cures The User Of The Vulture Curse",
@@ -12,8 +40,97 @@
   "text.boilingwitch.cures.constricting": "Cures The User Of The Constricting Curse",
   "text.boilingwitch.cure.unavailable": "No Cure Is Accessible On this Ocarina",
 
+  // Glyphs/Parchments
+  "block.boilingwitch.glyph_enhancement_table": "Glyph Enhancement Table",
+
+  "item.boilingwitch.glyph": "Glyph",
+  "item.boilingwitch.glyph_remnant": "Glyph Remnant",
+  "item.boilingwitch.glyph_light": "Glyph",
+  "item.boilingwitch.glyph_fire": "Glyph",
+  "item.boilingwitch.glyph_plant": "Glyph",
+  "item.boilingwitch.glyph_ice": "Glyph",
+
+  "text.boilingwitch.spell.glyph.light": "Light",
+  "text.boilingwitch.spell.glyph.fire": "Fire",
+  "text.boilingwitch.spell.glyph.plant": "Plant",
+  "text.boilingwitch.spell.glyph.ice": "Ice",
+
+  "item.boilingwitch.parchment": "Parchment",
+  "item.boilingwitch.parchment_invisibility": "Parchment",
+  "item.boilingwitch.parchment_safe_hover": "Parchment",
+  "item.boilingwitch.cursed_parchment_avian": "Cursed Parchment",
+  "item.boilingwitch.cursed_parchment_vulture": "Cursed Parchment",
+  "item.boilingwitch.cursed_parchment_unguarded": "Cursed Parchment",
+  "item.boilingwitch.cursed_parchment_deviancy": "Cursed Parchment",
+  "item.boilingwitch.cursed_parchment_boiling": "Cursed Parchment",
+
+  "text.boilingwitch.spell.parchment.invisibility": "Invisibility",
+  "text.boilingwitch.spell.parchment.safety_hover": "Safety Hover",
+  "text.boilingwitch.spell.parchment.avian.curse": "Avian Curse",
+  "text.boilingwitch.spell.parchment.vulture.curse": "Vulture Curse",
+  "text.boilingwitch.spell.parchment.unguarded.curse": "Unguarded Curse",
+  "text.boilingwitch.spell.parchment.deviancy.curse": "Deviancy Curse",
+  "text.boilingwitch.spell.parchment.boiling.curse": "Boiling Curse",
+
+  // Chalk
+  "item.boilingwitch.chalk": "Chalk",
+  "item.boilingwitch.chalk_light": "Chalk",
+  "item.boilingwitch.chalk_fire": "Chalk",
+  "item.boilingwitch.chalk_plant": "Chalk",
+  "item.boilingwitch.chalk_ice": "Chalk",
+
+  "text.boilingwitch.spell.chalk.light": "Allows For Light Transmogrification",
+  "text.boilingwitch.spell.chalk.fire": "Allows For Fire Transmogrification",
+  "text.boilingwitch.spell.chalk.plant": "Allows For Plant Transmogrification",
+  "text.boilingwitch.spell.chalk.ice": "Allows For Ice Transmogrification",
+
+  // Foods
+  "block.boilingwitch.resting_nettle": "Resting Nettle",
+  "item.boilingwitch.nettle_stew": "Nettle Stew",
+  "item.boilingwitch.fairy_cake": "Fairy Cake",
+  "item.boilingwitch.cleansed_fairy_cake": "Cleansed Fairy Cake",
+
+  // Miscellaneous Blocks/Items
+  "block.boilingwitch.palistrom_log": "Palistrom Log",
+  "block.boilingwitch.stripped_palistrom_log": "Stripped Palistrom Log",
+  "block.boilingwitch.palistrom_wood": "Palistrom Wood",
+  "block.boilingwitch.stripped_palistrom_wood": "Stripped Palistrom Wood",
+  "block.boilingwitch.palistrom_leaves": "Palistrom Leaves",
+  "block.boilingwitch.palistrom_sapling": "Palistrom Seed",
+
+  "block.boilingwitch.wrinkling_oak_log": "Wrinkling Oak Log",
+  "block.boilingwitch.stripped_wrinkling_oak_log": "Stripped Wrinkling Oak Log",
+  "block.boilingwitch.wrinkling_oak_wood": "Wrinkling Oak Wood",
+  "block.boilingwitch.stripped_wrinkling_oak_wood": "Stripped Wrinkling Oak Wood",
+  "block.boilingwitch.wrinkling_oak_leaves": "Wrinkling Oak Leaves",
+  "block.boilingwitch.wrinkling_oak_stairs": "Wrinkling Oak Stairs",
+  "block.boilingwitch.wrinkling_oak_slab": "Wrinkling Oak Slab",
+  "block.boilingwitch.wrinkling_oak_fence": "Wrinkling Oak Fence",
+  "block.boilingwitch.wrinkling_oak_fence_gate": "Wrinkling Oak Fence Gate",
+  "block.boilingwitch.wrinkling_oak_sapling": "Wrinkling Oak Seed",
+
+  "block.boilingwitch.aberrant_stone": "Aberrant Stone",
+  "block.boilingwitch.hoisting_block": "Hoisting Controller",
+  "block.boilingwitch.titan_bone_block": "Titan Bone Block",
+  "block.boilingwitch.fools_blood_block": "Block of Fools Blood",
+
+  "item.boilingwitch.mystic_essence": "Mystical Essence",
+  "item.boilingwitch.ruined_letter": "Ruined Letter",
+  "item.boilingwitch.tinted_echo_shard": "Tinted Echo Shard",
+  "item.boilingwitch.hoist_configurator": "Hoisting Configurator",
+  "item.boilingwitch.destabilizer": "Destabilizer",
+
+  "item.boilingwitch.funaria_moss": "Funaria Moss",
+
+  // Portal Creation
+  "item.boilingwitch.fractured_core": "Fractured Portal Core",
+  "item.boilingwitch.galdorstone": "Galdorstone",
+  "item.boilingwitch.galdorstone_shard": "Galdorstone Shard",
+
+  // Advancements
   "advancement.boilingwitch.obtain_fairy_cake.title": "No Cake Pants?",
   "advancement.boilingwitch.obtain_fairy_cake.description": "Obtain Fairy Cake",
 
+  // Death Messages
   "death.attack.boilingwitch.boiledWaters": "%1$s thought that the water was fine"
 }

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ocarina_from_base",
+  "ingredients": [
+    {
+      "item": "boilingwitch:ocarina",
+      "require": {
+        "curse": 0
+      }
+    },
+    {
+      "item": "minecraft:bone"
+    }
+  ],
+
+  "result": {
+    "item": "boilingwitch:ocarina",
+    "count": 1,
+
+    "data": {
+      "curseEffect": 1,
+      "curseKey": "vulture",
+      "curse": 0.3
+    }
+  }
+}

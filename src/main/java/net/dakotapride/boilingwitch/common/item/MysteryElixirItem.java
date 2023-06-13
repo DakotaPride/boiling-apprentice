@@ -62,7 +62,7 @@ public class MysteryElixirItem extends ElixirItem  {
 
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("text.mystery_elixir.effect").formatted(Formatting.ITALIC).formatted(Formatting.BLUE));
+        tooltip.add(Text.translatable("text.mystery_elixir.effect").formatted(Formatting.ITALIC).formatted(Formatting.GRAY));
     }
 
     @Override

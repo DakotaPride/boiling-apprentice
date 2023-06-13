@@ -43,9 +43,9 @@ public class EffectRegister {
                     -2.0, EntityAttributeModifier.Operation.ADDITION);
     public static StatusEffect CONSTRICTING_CURSE = registerEffect("constricting_curse", new ConstrictingCurseEffect()
             .addAttributeModifier(ReachEntityAttributes.REACH, "99caa763-d7e3-4c91-8379-4cb379440739",
-                    -0.75, EntityAttributeModifier.Operation.ADDITION)
+                    -1.15, EntityAttributeModifier.Operation.ADDITION)
             .addAttributeModifier(ReachEntityAttributes.ATTACK_RANGE, "5cc7fb3d-ee86-4438-862f-05141dc9adae",
-                    -0.75, EntityAttributeModifier.Operation.ADDITION))
+                    -1.15, EntityAttributeModifier.Operation.ADDITION))
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE, "0a0d3261-aa42-4e47-98a6-794949244a37",
                     4.0, EntityAttributeModifier.Operation.ADDITION);
 

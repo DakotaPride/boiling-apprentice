@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ocarina_from_base",
+  "ingredients": [
+    {
+      "item": "boilingwitch:ocarina",
+      "require": {
+        "curse": 0
+      }
+    },
+    {
+      "item": "minecraft:phantom_membrane"
+    }
+  ],
+
+  "result": {
+    "item": "boilingwitch:ocarina",
+    "count": 1,
+
+    "data": {
+      "curseEffect": 5,
+      "curseKey": "phantomesque",
+      "curse": 0.9
+    }
+  }
+}

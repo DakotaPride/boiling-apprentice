@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "ocarina_from_base",
+  "ingredients": [
+    {
+      "item": "boilingwitch:ocarina",
+      "require": {
+        "curse": 0
+      }
+    },
+    {
+      "item": "minecraft:iron_block"
+    }
+  ],
+
+  "result": {
+    "item": "boilingwitch:ocarina",
+    "count": 1,
+
+    "data": {
+      "curseEffect": 3,
+      "curseKey": "unguarded",
+      "curse": 0.45
+    }
+  }
+}

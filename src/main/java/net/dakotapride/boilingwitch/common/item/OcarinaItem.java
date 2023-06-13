@@ -13,6 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
+import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -40,26 +41,49 @@ public class OcarinaItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
+        ItemStack stack = user.getStackInHand(hand);
         user.setCurrentHand(hand);
 
-        if (itemStack.hasNbt()) {
-            world.playSound(user, user.getBlockPos(), SoundEventRegister.CURSE_CURED_FROM_OCARINA,
-                    SoundCategory.PLAYERS, 0.8f, 1.0f);
 
-            user.removeStatusEffect(getCurses.get(itemStack.getNbt().getInt("curseEffect")));
+        if (stack.getNbt() != null && stack.getNbt().contains("curseEffect")) {
+            if (user.hasStatusEffect(getCurses.get(stack.getNbt().getInt("curseEffect")))) {
 
-            user.getItemCooldownManager().set(this, 120);
+                world.playSound(user, user.getBlockPos(), SoundEventRegister.CURSE_CURED_FROM_OCARINA,
+                        SoundCategory.RECORDS, 1.0F, 1.0F);
 
-            return TypedActionResult.consume(itemStack);
+                user.getItemCooldownManager().set(this, 120);
+
+                stack.damage(1, user, (stack1) -> user.sendToolBreakStatus(user.getActiveHand()));
+
+                user.removeStatusEffect(getCurses.get(stack.getNbt().getInt("curseEffect")));
+            } else if (!user.hasStatusEffect(getCurses.get(stack.getNbt().getInt("curseEffect")))) {
+
+                world.playSound(user, user.getBlockPos(), SoundEventRegister.OCARINA_HARMED_FROM_WRONGFUL_USE,
+                        SoundCategory.RECORDS, 1.0f, 1.0f);
+
+                user.getItemCooldownManager().set(this, 240);
+
+                stack.damage(2, user, (stack1) -> user.sendToolBreakStatus(user.getActiveHand()));
+            }
+
         }
 
         return super.use(world, user, hand);
     }
 
     @Override
+    public int getMaxUseTime(ItemStack stack) {
+        return 54;
+    }
+
+    @Override
+    public UseAction getUseAction(ItemStack stack) {
+        return UseAction.TOOT_HORN;
+    }
+
+    @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-        if (!stack.hasNbt()) {
+        if (stack.getNbt() != null && !stack.getNbt().contains("curseEffect")) {
             tooltip.add(Text.translatable("text.boilingwitch.cure.unavailable").formatted(Formatting.GRAY).formatted(Formatting.ITALIC));
         } else {
             tooltip.add(Text.translatable("text.boilingwitch.cures." + stack.getNbt().getString("curseKey")).formatted(Formatting.BLUE));

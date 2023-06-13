@@ -96,7 +96,7 @@ public class ItemRegister implements IBoilingWitchItemGroup {
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     public static Item OCARINA = registerItem("ocarina",
-            new OcarinaItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP)));
+            new OcarinaItem(new FabricItemSettings().maxCount(1).maxDamage(8).group(BOILING_WITCH_GROUP)));
 
     public static Item FUNARIA_MOSS = registerItem("funaria_moss",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));

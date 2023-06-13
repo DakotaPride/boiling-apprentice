@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "elixir",
+  "ingredients": [
+    {
+      "item": "boilingwitch:funaria_moss"
+    },
+    {
+      "item": "boilingwitch:elixir",
+      "require": {
+        "hasEffect": false
+      }
+    }
+  ],
+  "result": {
+    "item": "boilingwitch:elixir",
+    "count": 1,
+
+    "data": {
+      "hasEffect": true,
+      "effectValue": 0,
+      "effectKey": "minecraft.speed",
+      "effect": 0.05
+    }
+  }
+}

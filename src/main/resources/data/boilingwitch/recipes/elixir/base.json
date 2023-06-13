@@ -16,6 +16,10 @@
   },
   "result": {
     "item": "boilingwitch:elixir",
-    "count": 1
+    "count": 1,
+
+    "data": {
+      "hasEffect": false
+    }
   }
 }
