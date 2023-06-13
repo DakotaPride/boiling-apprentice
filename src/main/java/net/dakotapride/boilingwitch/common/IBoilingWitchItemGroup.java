@@ -17,6 +17,13 @@ public interface IBoilingWitchItemGroup {
         return stack;
     }
 
+    static ItemStack getImmortalOcarina(ItemStack stack) {
+
+        stack.getOrCreateNbt().putInt("immortal", 1);
+
+        return stack;
+    }
+
     ItemGroup BOILING_WITCH_GROUP = FabricItemGroupBuilder.create(
                     new Identifier(BoilingWitchMod.MOD_ID, "boiling_witch"))
             .icon(() -> new ItemStack(ItemRegister.GLYPH.asItem())).appendItems(((itemStacks, group) -> {

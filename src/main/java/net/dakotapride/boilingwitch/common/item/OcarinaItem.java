@@ -23,7 +23,7 @@ public class OcarinaItem extends Item {
     ImmutableList<StatusEffect> getCurses;
 
     public OcarinaItem(Settings settings) {
-        super(settings);
+        super(settings.maxDamage(8));
 
         ImmutableList.Builder<StatusEffect> builder = ImmutableList.builder();
 

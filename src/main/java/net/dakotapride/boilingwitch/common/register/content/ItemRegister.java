@@ -1,6 +1,7 @@
 package net.dakotapride.boilingwitch.common.register.content;
 
 import net.dakotapride.boilingwitch.common.IBoilingWitchItemGroup;
+import net.dakotapride.boilingwitch.common.datagen.tag.InstrumentTagData;
 import net.dakotapride.boilingwitch.common.item.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
@@ -85,6 +86,8 @@ public class ItemRegister implements IBoilingWitchItemGroup {
 
     public static Item TINTED_ECHO_SHARD = registerItem("tinted_echo_shard",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+    public static Item AUREATE_ECHO_SHARD = registerItem("aureate_echo_shard",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
     public static Item HOIST_CONFIGURATOR = registerItem("hoist_configurator",
             new HoistConfiguratorItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
@@ -97,6 +100,8 @@ public class ItemRegister implements IBoilingWitchItemGroup {
 
     public static Item OCARINA = registerItem("ocarina",
             new OcarinaItem(new FabricItemSettings().maxCount(1).maxDamage(8).group(BOILING_WITCH_GROUP)));
+    public static Item OCARINA_IMMORTAL = registerItem("ocarina_immortal",
+            new ImmortalOcarinaItem(new FabricItemSettings().maxCount(1).group(BOILING_WITCH_GROUP), InstrumentTagData.OCARINA_MUSICAL_EFFECTS));
 
     public static Item FUNARIA_MOSS = registerItem("funaria_moss",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));

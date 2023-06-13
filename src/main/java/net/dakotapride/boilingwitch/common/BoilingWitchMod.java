@@ -29,6 +29,7 @@ public class BoilingWitchMod implements ModInitializer {
 		BlockEntityRegister.register();
 		SoundEventRegister.register();
 		DamageSourceRegister.register();
+		InstrumentRegister.register();
 
 		PlacedFeatureRegister.init();
 

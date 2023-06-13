@@ -10,5 +10,30 @@
     "sounds": [
       "boilingwitch:ocarina/harmed"
     ]
+  },
+
+  "ocarina_melody_reinvention": {
+    "subtitle": "boilingwitch.ocarina.melody",
+    "sounds": [
+      "boilingwitch:ocarina/melody/reinvention"
+    ]
+  },
+  "ocarina_melody_hallucinogenic": {
+    "subtitle": "boilingwitch.ocarina.melody",
+    "sounds": [
+      "boilingwitch:ocarina/melody/hallucinogenic"
+    ]
+  },
+  "ocarina_melody_wondrous": {
+    "subtitle": "boilingwitch.ocarina.melody",
+    "sounds": [
+      "boilingwitch:ocarina/melody/wondrous"
+    ]
+  },
+  "ocarina_melody_juncture": {
+    "subtitle": "boilingwitch.ocarina.melody",
+    "sounds": [
+      "boilingwitch:ocarina/melody/juncture"
+    ]
   }
 }
