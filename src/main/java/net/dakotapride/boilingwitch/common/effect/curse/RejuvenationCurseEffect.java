@@ -16,7 +16,7 @@ public class RejuvenationCurseEffect extends Curse implements ISpellStoring {
     @Override
     public void applyUpdateEffect(LivingEntity entity, int amplifier) {
         if (this == EffectRegister.REJUVENATION_CURSE && entity instanceof PlayerEntity) {
-            ((PlayerEntity)entity).addExhaustion(0.05F * (float)(amplifier + 2));
+            ((PlayerEntity)entity).addExhaustion(0.15F * (float)(amplifier + 2));
         }
     }
 
@@ -30,5 +30,10 @@ public class RejuvenationCurseEffect extends Curse implements ISpellStoring {
     public void onApplied(LivingEntity entity, AttributeContainer attributes, int amplifier) {
         entity.setAbsorptionAmount(entity.getAbsorptionAmount() + (float)(6 * (amplifier + 2)));
         super.onApplied(entity, attributes, amplifier);
+    }
+
+    @Override
+    public boolean canApplyUpdateEffect(int duration, int amplifier) {
+        return this == EffectRegister.REJUVENATION_CURSE;
     }
 }
