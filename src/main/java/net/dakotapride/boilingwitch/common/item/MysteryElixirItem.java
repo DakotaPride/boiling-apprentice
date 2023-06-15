@@ -40,6 +40,8 @@ public class MysteryElixirItem extends ElixirItem  {
         builder.add(EffectRegister.BOILING_CURSE);
         builder.add(EffectRegister.PHANTOMESQUE_CURSE);
         builder.add(EffectRegister.CONSTRICTING_CURSE);
+        builder.add(EffectRegister.REJUVENATION_CURSE);
+        builder.add(EffectRegister.REVITALIZATION_CURSE);
 
 
         this.effects = builder.build();
@@ -67,7 +69,7 @@ public class MysteryElixirItem extends ElixirItem  {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        int getRandomEffectFromInteger = Random.create().nextBetween(1, effects.size());
+        int getRandomEffectFromInteger = Random.create().nextBetween(1, effects.size() - 1);
 
         PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
         if (playerEntity instanceof ServerPlayerEntity serverPlayer) {
