@@ -1,7 +1,6 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"energy": "boilingwitch:item/glyph/energy/unavailable",
 		"glyph": "boilingwitch:item/glyph/base",
 		"overlay": "boilingwitch:item/glyph/overlay/overlay"
 	},
@@ -32,20 +31,6 @@
 				"west": {"uv": [0, 0, 7, 0], "texture": "#overlay"},
 				"up": {"uv": [5, 7, 0, 0], "texture": "#overlay"},
 				"down": {"uv": [10, 0, 5, 7], "texture": "#overlay"}
-			}
-		},
-		{
-			"name": "energy",
-			"from": [5, 7.025, 4],
-			"to": [10, 7.025, 11],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7.5, 7.025, 7.5]},
-			"faces": {
-				"north": {"uv": [0, 0, 5, 0], "texture": "#energy"},
-				"east": {"uv": [0, 0, 7, 0], "texture": "#energy"},
-				"south": {"uv": [0, 0, 5, 0], "texture": "#energy"},
-				"west": {"uv": [0, 0, 7, 0], "texture": "#energy"},
-				"up": {"uv": [5, 7, 0, 0], "texture": "#energy"},
-				"down": {"uv": [10, 0, 5, 7], "texture": "#energy"}
 			}
 		}
 	],
@@ -92,7 +77,7 @@
 			"name": "page0",
 			"origin": [7.5, 7, 7.5],
 			"color": 0,
-			"children": [0, 1, 2]
+			"children": [0, 1]
 		}
 	]
 }
