@@ -118,7 +118,7 @@ public class ItemRegister implements IBoilingWitchItemGroup {
 
     public static Item GALDORSTONE = registerItem("galdorstone",
             new GaldorstoneItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
-    public static Item GALDORSTONE_SHARD = registerItem("galdorstone_shard",
+    public static Item CRACKED_GALDORSTONE = registerItem("cracked_galdorstone",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
 

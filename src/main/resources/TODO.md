@@ -15,7 +15,7 @@ These Ruined Letters will also have some occasional information on them (as a to
 Ruined Letters will, however, also be used to create Boiled Letters (which basically replace Boiled Notes), which have been transferred to a later point in progression.
 
 ##### Abandoned Fool's Blood Digsite
-As mentioned prior, these structures are key to the progression of this mod, as there are many items that are exclusive to this structure. This includes Ruined Letters, Exposed Aberrant Stone, Tinted Echo Shards, Galdorstone Shards, as well as a few other items.
+As mentioned prior, these structures are key to the progression of this mod, as there are many items that are exclusive to this structure. This includes Ruined Letters, Exposed Aberrant Stone, Tinted Echo Shards, Cracked Galdorstone, as well as a few other items.
 
 ##### Exposed Aberrant Stone
 Exposed Aberrant Stone can be polished and refined to create regular Aberrant Stone, which is an ingredient needed to create the rift between realms.
@@ -26,8 +26,8 @@ Tinted Echo Shards can be crafted, but only after one has reached the Demon Real
 ##### Fractured Core
 A Fractured Core is used as the main ingredient in creating a Humoured Portal-Case. This can only be used twice, but can be improved to eventually have infinite uses. (this feature is controlled via config, meaning that in the standard version of the mod, the feature will be disabled. However, in the modpack, the feature will be enabled)
 
-##### Galdorstones/Galdorstone Shards
-Galderstone Shards are used briefly in the creation of several variations of a Portal-Case. They can also be crafted into full Galdorstones later on in the progression.
+##### Galdorstones/Cracked Galdorstone
+Cracked Galdorstones are used briefly in the creation of several variations of a Portal-Case. They can also be crafted into full Galdorstones later on in the progression.
 
 ##### Interdimensional Rifts
 Occasionally, Interdimensional Rifts will generate in these digsites. They function as permanent portals between realms, however, they cannot move from place to place, unlike the portals created by the player.

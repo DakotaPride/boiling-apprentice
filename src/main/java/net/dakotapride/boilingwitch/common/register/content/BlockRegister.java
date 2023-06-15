@@ -4,8 +4,8 @@ import net.dakotapride.boilingwitch.common.IBoilingWitchItemGroup;
 import net.dakotapride.boilingwitch.common.block.GlyphEnhancementTableBlock;
 import net.dakotapride.boilingwitch.common.block.HoistingBlock;
 import net.dakotapride.boilingwitch.common.block.RestingNettleBlock;
-import net.dakotapride.boilingwitch.common.block.saplingGenerator.WrinklingOakSaplingGenerator;
 import net.dakotapride.boilingwitch.common.block.tree.PalistromSaplingBlock;
+import net.dakotapride.boilingwitch.common.block.tree.WrinklingOakSaplingBlock;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
 import net.minecraft.sound.BlockSoundGroup;
@@ -33,7 +33,7 @@ public class BlockRegister implements IBoilingWitchItemGroup {
     public static Block PALISTROM_PLANKS = registerBlock("palistrom_planks",
             new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), BOILING_WITCH_GROUP);
     public static Block PALISTROM_SEEDS = registerBlock("palistrom_sapling",
-            new PalistromSaplingBlock(FabricBlockSettings.copy(Blocks.OAK_SAPLING)), BOILING_WITCH_GROUP);
+            new PalistromSaplingBlock(FabricBlockSettings.copy(Blocks.OAK_SAPLING).sounds(BlockSoundGroup.WOOD)), BOILING_WITCH_GROUP);
 
     public static Block WRINKLING_OAK_LOG = registerBlock("wrinkling_oak_log",
             new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG)), BOILING_WITCH_GROUP);
@@ -48,7 +48,7 @@ public class BlockRegister implements IBoilingWitchItemGroup {
     public static Block WRINKLING_OAK_PLANKS = registerBlock("wrinkling_oak_planks",
             new Block(FabricBlockSettings.copy(Blocks.OAK_PLANKS)), BOILING_WITCH_GROUP);
     public static Block WRINKLING_OAK_SAPLING = registerBlock("wrinkling_oak_sapling",
-            new SaplingBlock(new WrinklingOakSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)), BOILING_WITCH_GROUP);
+            new WrinklingOakSaplingBlock(FabricBlockSettings.copy(Blocks.OAK_SAPLING).sounds(BlockSoundGroup.WOOD)), BOILING_WITCH_GROUP);
     public static Block WRINKLING_OAK_STAIRS = registerBlock("wrinkling_oak_stairs",
             new StairsBlock(WRINKLING_OAK_PLANKS.getDefaultState(), FabricBlockSettings.copy(Blocks.OAK_STAIRS)), BOILING_WITCH_GROUP);
     public static Block WRINKLING_OAK_SLAB = registerBlock("wrinkling_oak_slab",
