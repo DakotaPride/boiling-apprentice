@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "boilingwitch:non_3d/ocarina"
+  },
+  "overrides": [
+    {"model": "boilingwitch:item/ocarina_avian", "predicate": {"curse": 0.15}},
+    {"model": "boilingwitch:item/ocarina_vulture", "predicate": {"curse": 0.3}},
+    {"model": "boilingwitch:item/ocarina_unguarded", "predicate": {"curse": 0.45}},
+    {"model": "boilingwitch:item/ocarina_boiling", "predicate": {"curse": 0.6}},
+    {"model": "boilingwitch:item/ocarina_deviancy", "predicate": {"curse": 0.75}},
+    {"model": "boilingwitch:item/ocarina_phantomesque", "predicate": {"curse": 0.9}},
+    {"model": "boilingwitch:item/ocarina_constricting", "predicate": {"curse": 1}},
+
+    {"model": "boilingwitch:item/ocarina_immortal", "predicate": {"immortal": 1}}
+  ]
+}
