@@ -3,7 +3,7 @@
   "fallback": "minecraft:empty",
   "elements": [
     {
-      "weight": 1,
+      "weight": 2,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
@@ -12,7 +12,7 @@
       }
     },
     {
-      "weight": 5,
+      "weight": 4,
       "element": {
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
@@ -26,6 +26,15 @@
         "element_type": "minecraft:single_pool_element",
         "projection": "rigid",
         "location": "boilingwitch:abandoned_digsite/wrinkling_oak_wood_deposit",
+        "processors": "minecraft:empty"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "projection": "rigid",
+        "location": "boilingwitch:abandoned_digsite/titan_bones",
         "processors": "minecraft:empty"
       }
     }
