@@ -26,8 +26,6 @@ public class ItemTagData extends FabricTagProvider<Item> {
             new Identifier(BoilingWitchMod.MOD_ID, "wrinkling_oak_logs"));
     public static TagKey<Item> IS_CHALK = TagKey.of(Registry.ITEM_KEY,
             new Identifier(BoilingWitchMod.MOD_ID, "chalk"));
-    public static TagKey<Item> CAN_REPAIR_MYSTIC_EQUIPMENT = TagKey.of(Registry.ITEM_KEY,
-            new Identifier(BoilingWitchMod.MOD_ID, "mystic/can_repair"));
 
     public ItemTagData(FabricDataGenerator dataGenerator) {
         super(dataGenerator, Registry.ITEM);
@@ -76,23 +74,5 @@ public class ItemTagData extends FabricTagProvider<Item> {
                 .add(ItemRegister.CHALK_ICE)
                 .add(ItemRegister.CHALK_PLANT)
                 .add(ItemRegister.CHALK_LIGHT);
-
-        getOrCreateTagBuilder(CAN_REPAIR_MYSTIC_EQUIPMENT)
-                .add(Items.WHITE_WOOL)
-                .add(Items.BLACK_WOOL)
-                .add(Items.BROWN_WOOL)
-                .add(Items.GRAY_WOOL)
-                .add(Items.LIGHT_GRAY_WOOL)
-                .add(Items.MAGENTA_WOOL)
-                .add(Items.RED_WOOL)
-                .add(Items.ORANGE_WOOL)
-                .add(Items.YELLOW_WOOL)
-                .add(Items.LIME_WOOL)
-                .add(Items.GREEN_WOOL)
-                .add(Items.BLUE_WOOL)
-                .add(Items.CYAN_WOOL)
-                .add(Items.LIGHT_BLUE_WOOL)
-                .add(Items.PURPLE_WOOL)
-                .add(Items.PINK_WOOL);
     }
 }

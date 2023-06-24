@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "boilingwitch:parchment"
+    },
+    "A": {
+      "item": "minecraft:glass"
+    },
+    "X": {
+      "item": "boilingwitch:mystic_essence"
+    }
+  },
+  "pattern": [
+    "#X",
+    "A "
+  ],
+  "result": {
+    "item": "boilingwitch:parchment_invisibility"
+  }
+}

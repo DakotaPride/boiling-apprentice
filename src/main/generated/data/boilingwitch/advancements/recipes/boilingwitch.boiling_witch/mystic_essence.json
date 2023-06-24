@@ -1,24 +1,24 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_mystic_essence": {
+    "has_glowstone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "boilingwitch:mystic_essence"
+              "minecraft:glowstone_dust"
             ]
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_paper": {
+    "has_lapis_lazuli": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:paper"
+              "minecraft:lapis_lazuli"
             ]
           }
         ]
@@ -27,21 +27,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glyph"
+        "recipe": "minecraft:mystic_essence"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_paper",
-      "has_mystic_essence",
+      "has_lapis_lazuli",
+      "has_glowstone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glyph"
+      "minecraft:mystic_essence"
     ]
   }
 }

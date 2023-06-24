@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "boilingwitch:parchment"
+    },
+    "A": {
+      "item": "minecraft:feather"
+    },
+    "B": {
+      "item": "boilingwitch:corrupt_slime"
+    },
+    "X": {
+      "item": "boilingwitch:mystic_essence"
+    }
+  },
+  "pattern": [
+    "#X",
+    "AB"
+  ],
+  "result": {
+    "item": "boilingwitch:cursed_parchment_avian"
+  }
+}

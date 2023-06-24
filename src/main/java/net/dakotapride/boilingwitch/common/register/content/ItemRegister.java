@@ -107,6 +107,9 @@ public class ItemRegister implements IBoilingWitchItemGroup {
     public static Item FUNARIA_MOSS = registerItem("funaria_moss",
             new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
 
+    public static Item CORRUPT_SLIME = registerItem("corrupt_slime",
+            new Item(new FabricItemSettings().group(BOILING_WITCH_GROUP)));
+
     // Brewing Advancing Items
     public static Item MASK_OF_PURITY = registerItem("mask_of_purity",
             new MaskOfPurityItem(new FabricItemSettings().group(BOILING_WITCH_GROUP)));

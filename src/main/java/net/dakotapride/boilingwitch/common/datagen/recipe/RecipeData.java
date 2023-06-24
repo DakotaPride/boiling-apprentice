@@ -10,6 +10,7 @@ import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
+import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.function.Consumer;
@@ -74,11 +75,21 @@ public class RecipeData extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier(chalk + "light"));
 
         // Glyphs
+        ShapelessRecipeJsonBuilder.create(ItemRegister.MYSTIC_ESSENCE)
+                .input(Items.LAPIS_LAZULI)
+                .input(Items.LAPIS_LAZULI)
+                .input(Items.LAPIS_LAZULI)
+                .input(Items.LAPIS_LAZULI)
+                .criterion("has_lapis_lazuli", RecipeProvider.conditionsFromItem(Items.LAPIS_LAZULI))
+                .input(Items.GLOWSTONE_DUST)
+                .criterion("has_glowstone", RecipeProvider.conditionsFromItem(Items.GLOWSTONE_DUST))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.MYSTIC_ESSENCE)));
+
         ShapelessRecipeJsonBuilder.create(ItemRegister.GLYPH)
                 .input(Items.PAPER)
                 .criterion("has_paper", RecipeProvider.conditionsFromItem(Items.PAPER))
-                .input(ItemTagData.IS_ACCEPTABLE_TOME_INGREDIENTS)
-                .criterion("has_tome_ingredients", RecipeProvider.conditionsFromTag(ItemTagData.IS_ACCEPTABLE_TOME_INGREDIENTS))
+                .input(ItemRegister.MYSTIC_ESSENCE)
+                .criterion("has_mystic_essence", RecipeProvider.conditionsFromItem(ItemRegister.MYSTIC_ESSENCE))
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.GLYPH)));
 
         // TODO: Expand Upon The Existing Glyph System And Add More Abilities to Already Existing Glyphs
@@ -93,6 +104,55 @@ public class RecipeData extends FabricRecipeProvider {
                 .input('X', Items.STRING)
                 .criterion("has_string", RecipeProvider.conditionsFromItem(Items.STRING))
                 .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.MASK_OF_PURITY)));
+
+        // Parchments
+        String parchment = "parchment/";
+        String cursedParchment = parchment + "cursed/";
+        ShapedRecipeJsonBuilder.create(ItemRegister.PARCHMENT)
+                .pattern("  #")
+                .pattern("BXA")
+                .pattern("#  ")
+                .input('#', Items.PAPER)
+                .criterion("has_paper", RecipeProvider.conditionsFromItem(Items.PAPER))
+                .input('A', ItemRegister.MYSTIC_ESSENCE)
+                .criterion("has_mystic_essence", RecipeProvider.conditionsFromItem(ItemRegister.MYSTIC_ESSENCE))
+                .input('X', ItemTags.WOOL)
+                .criterion("has_wool", RecipeProvider.conditionsFromTag(ItemTags.WOOL))
+                .input('B', Items.STRING)
+                .criterion("has_string", RecipeProvider.conditionsFromItem(Items.STRING))
+                .offerTo(exporter, new Identifier(RecipeProvider.getRecipeName(ItemRegister.PARCHMENT)));
+        ShapedRecipeJsonBuilder.create(ItemRegister.PARCHMENT_INVISIBILITY)
+                .pattern("#X")
+                .pattern("A ")
+                .input('#', ItemRegister.PARCHMENT)
+                .criterion("has_parchment", RecipeProvider.conditionsFromItem(ItemRegister.PARCHMENT))
+                .input('X', ItemRegister.MYSTIC_ESSENCE)
+                .criterion("has_mystic_essence", RecipeProvider.conditionsFromItem(ItemRegister.MYSTIC_ESSENCE))
+                .input('A', Items.GLASS)
+                .criterion("has_glass", RecipeProvider.conditionsFromItem(Items.GLASS))
+                .offerTo(exporter, new Identifier(parchment + "invisibility"));
+        ShapedRecipeJsonBuilder.create(ItemRegister.PARCHMENT_SAFE_HOVER)
+                .pattern("#X")
+                .pattern("A ")
+                .input('#', ItemRegister.PARCHMENT)
+                .criterion("has_parchment", RecipeProvider.conditionsFromItem(ItemRegister.PARCHMENT))
+                .input('X', ItemRegister.MYSTIC_ESSENCE)
+                .criterion("has_mystic_essence", RecipeProvider.conditionsFromItem(ItemRegister.MYSTIC_ESSENCE))
+                .input('A', Items.PHANTOM_MEMBRANE)
+                .criterion("has_phantom_membrane", RecipeProvider.conditionsFromItem(Items.PHANTOM_MEMBRANE))
+                .offerTo(exporter, new Identifier(parchment + "safety_hover"));
+        ShapedRecipeJsonBuilder.create(ItemRegister.CURSED_PARCHMENT_AVIAN)
+                .pattern("#X")
+                .pattern("AB")
+                .input('#', ItemRegister.PARCHMENT)
+                .criterion("has_parchment", RecipeProvider.conditionsFromItem(ItemRegister.PARCHMENT))
+                .input('X', ItemRegister.MYSTIC_ESSENCE)
+                .criterion("has_mystic_essence", RecipeProvider.conditionsFromItem(ItemRegister.MYSTIC_ESSENCE))
+                .input('A', Items.FEATHER)
+                .criterion("has_feather", RecipeProvider.conditionsFromItem(Items.FEATHER))
+                .input('B', ItemRegister.CORRUPT_SLIME)
+                .criterion("has_corrupt_slime", RecipeProvider.conditionsFromItem(ItemRegister.CORRUPT_SLIME))
+                .offerTo(exporter, new Identifier(cursedParchment + "avian"));
 
         // Wood Types
         // Planks

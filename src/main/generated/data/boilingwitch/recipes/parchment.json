@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:paper"
+    },
+    "A": {
+      "item": "boilingwitch:mystic_essence"
+    },
+    "B": {
+      "item": "minecraft:string"
+    },
+    "X": {
+      "tag": "minecraft:wool"
+    }
+  },
+  "pattern": [
+    "  #",
+    "BXA",
+    "#  "
+  ],
+  "result": {
+    "item": "boilingwitch:parchment"
+  }
+}

@@ -13,12 +13,24 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_paper": {
+    "has_parchment": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:paper"
+              "boilingwitch:parchment"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_phantom_membrane": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:phantom_membrane"
             ]
           }
         ]
@@ -27,21 +39,22 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:glyph"
+        "recipe": "minecraft:parchment/safety_hover"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_paper",
+      "has_parchment",
       "has_mystic_essence",
+      "has_phantom_membrane",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:glyph"
+      "minecraft:parchment/safety_hover"
     ]
   }
 }
